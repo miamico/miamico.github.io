@@ -2768,8 +2768,25 @@ body {
 .cid-r9YEFZX9Ly .mbr-text LI {
   color: #ffffff;
 }
-.cid-r9ZiEeMusF {
+.cid-rb7nN4EVfF {
+  padding-top: 120px;
+  padding-bottom: 60px;
   background-color: #073b4c;
+}
+.cid-rb7nN4EVfF .counter-container {
+  color: #767676;
+}
+.cid-rb7nN4EVfF .counter-container ol {
+  margin-bottom: 0;
+}
+.cid-rb7nN4EVfF .counter-container ol li {
+  margin-bottom: 1rem;
+}
+.cid-rb7nN4EVfF .mbr-text LI {
+  color: #ffffff;
+}
+.cid-rb7nN4EVfF .mbr-text DIV {
+  text-align: left;
 }
 .cid-r9YtTFOrHU .navbar {
   padding: .5rem 0;
