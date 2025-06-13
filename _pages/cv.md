@@ -1,31 +1,64 @@
 ---
-title: "Curriculum Vitae"
-layout: single
+layout: archive
+title: "CV"
 permalink: /cv/
 author_profile: true
+redirect_from:
+  - /resume
 ---
 
-### Education  
-- **Ph.D. in Physics**, The Graduate Center, City University of New York (CUNY), 2019  
-  *Dissertation:* *Quantum Entanglement in Non-Stationary Cavity QED Systems* (studying entanglement dynamics due to the dynamical Lamb effect).  
-- **M.Sc. in Physics**, University of [___]*, 2014  
-- **B.Sc. in Physics**, University of [___]*, 2012  
+{% include base_path %}
 
-### Professional Appointments  
-- **Research Staff Member – Quantum Computing**, IBM Research, Yorktown Heights, NY (2020–present)  
-  Conducting research on quantum algorithms, quantum processor benchmarking, and error mitigation techniques as part of the IBM Quantum team. Responsibilities include leading projects on quantum control (developing error-robust gate designs) and collaborating in multi-disciplinary efforts to improve quantum hardware performance.  
-- **Graduate Researcher**, CUNY Graduate Center & City College of New York (2015–2019)  
-  Doctoral research in theoretical quantum optics and quantum information. Investigated time-dependent entanglement generation in superconducting qubits and authored publications on quantum entanglement dynamics in non-stationary cavities:contentReference[oaicite:19]{index=19}:contentReference[oaicite:20]{index=20}. Also served as a teaching assistant for undergraduate physics courses.
+Education
+======
+* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* M.S. in Jekyll, GitHub University, 2014
+* B.S. in GitHub, GitHub University, 2012
 
-### Publications  
-- **Author of 15+ research publications** in quantum computing and quantum physics, including articles in *Physical Review A* and *PRX Quantum*. For a full list of publications with bibliographic details, see the [Publications](/publications/) page. Key contributions include the first experimental realization of Shor’s algorithm on an IBM quantum processor:contentReference[oaicite:21]{index=21}, and innovative techniques for quantum gate optimization published in *PRX Quantum*. Mirko’s work has accrued over 100 citations, reflecting its impact on the field.
+Work experience
+======
+* Spring 2024: Academic Pages Collaborator
+  * GitHub University
+  * Duties includes: Updates and improvements to template
+  * Supervisor: The Users
 
-### Projects and Software  
-- Developed open-source code for quantum computing research (see the [Projects](/projects/) page). Notably, Mirko created Python notebooks for quantum generative adversarial networks (QGANs) and for simulating the dynamical Lamb effect in cavity QED, as well as shared implementation code from his experiments (e.g., Shor’s algorithm demonstration). He is proficient in **Qiskit**, Python, and numerical simulation tools, and actively contributes to the quantum open-source community via GitHub.
+* Fall 2015: Research Assistant
+  * GitHub University
+  * Duties included: Merging pull requests
+  * Supervisor: Professor Hub
 
-### Awards and Honors  
-- **IBM Quantum Best Paper Award** (QCE 2023) – *Defining Best Practices for Quantum Benchmarks* (co-author):contentReference[oaicite:22]{index=22}【27†L435-L443**】.  
-- **CUNY Dissertation Fellowship** (2018) – Awarded for outstanding research progress during doctoral studies.  
-- **Phi Beta Kappa**, University of [___]*, 2012 – Inducted for academic excellence in physics.
+* Summer 2015: Research Assistant
+  * GitHub University
+  * Duties included: Tagging issues
+  * Supervisor: Professor Git
+  
+Skills
+======
+* Skill 1
+* Skill 2
+  * Sub-skill 2.1
+  * Sub-skill 2.2
+  * Sub-skill 2.3
+* Skill 3
 
-(*References:* For detailed information on publications and projects, please refer to the respective sections of this site. A PDF version of Mirko Amico’s CV can be made available upon request.)
+Publications
+======
+  <ul>{% for post in site.publications reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  
+Talks
+======
+  <ul>{% for post in site.talks reversed %}
+    {% include archive-single-talk-cv.html  %}
+  {% endfor %}</ul>
+  
+Teaching
+======
+  <ul>{% for post in site.teaching reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  
+Service and leadership
+======
+* Currently signed in to 43 different slack teams
