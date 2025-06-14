@@ -30,14 +30,13 @@
       <p>I develop and implement quantum algorithms to measure quantities of interest, stay within the coherence budget of noisy hardware. Highlights include Krylov-subspace diagonalisation of ~50-site spin lattices, the first experimental extraction of conformal-field-theory central charge on a universal processor, and early demonstrations that qubit-level matched filtering can recover astrophysical signals at classical signal-to-noise ratios. All of these share a guiding principle: pair modest quantum circuits with classical post-processing to reach classically intractable regimes sooner.</p>
 
       <div class="card-grid">
-      <div class="card" id="kqd">
+      <div class="card" id="kqd" tabindex="0">
         <h4>Krylov Quantum Diagonalization</h4>
         <p>Diagonalizing large many-body Hamiltonians via shallow Trotter circuits and classical post-processing.</p>
-        <p>
+        <footer>
           <a class="button button-primary" href="https://arxiv.org/abs/2407.14431">Paper</a>
-          <a class="button" href="https://quantum.cloud.ibm.com/docs/tutorials/krylov-quantum-diagonalization">Tutorial</a>
-        </p>
-      </div>
+        </footer>
+      </article>
       </div> <!-- end card-grid -->
 
     </section>
@@ -47,50 +46,45 @@
       <p>Reliable algorithms require hardware-aware error suppression and mitigation. I build tools for: autonomous calibration of control pulses based on deep-reinforcement-learning and black-box optimization techniques; compiler techniques to reduce crosstalk via dynamical decoupling sequences; qubit selection protocols based on efficient sparse-noise tomography to execute the algorithm on the best performing qubits. These ideas extend into algorithmic space: I've recently started to explore tensor-network-assisted algorithm implementation, like multiproduct formulas, to improve performance without sacrificing circuit depth. Across all projects the aim is the same: suppress dominant errors <em>in situ</em> so mitigation overhead stays manageable.</p>
 
       <div class="card-grid">
-      <div class="card" id="mpf">
+      <div class="card" id="mpf" tabindex="0">
         <h4>Tensor-network-enhanced MPF</h4>
         <p>Compressing time-evolution circuits using multiproduct formulas assisted by tensor networks.</p>
-        <p>
+        <footer>
           <a class="button button-primary" href="https://arxiv.org/abs/2407.17405">Paper</a>
-          <a class="button" href="https://github.com/Qiskit/qiskit-addon-mpf">Code</a>
-        </p>
-      </div>
+        </footer>
+      </article>
 
-      <div class="card" id="pec">
+      <div class="card" id="pec" tabindex="0">
         <h4>Probabilistic error cancellation and amplification</h4>
         <p>Toolkit for modeling device noise and reconstructing unbiased expectation values using quasi-probability techniques.</p>
-        <p>
+        <footer>
           <a class="button" href="https://docs.quantum.ibm.com/guides/error-mitigation-and-suppression-techniques">Docs</a>
-          <a class="button" href="https://quantum.cloud.ibm.com/docs/en/tutorials/probabilistic-error-amplification">Tutorial</a>
-        </p>
-      </div>
+        </footer>
+      </article>
 
-      <div class="card" id="qubits">
+      <div class="card" id="qubits" tabindex="0">
         <h4>Noise-Aware Qubit Selection</h4>
         <p>Choosing the best qubits using sparse noise tomography or aggregated error metrics.</p>
-        <p>
+        <footer>
           <a class="button button-primary" href="https://patents.google.com/patent/US20250165836A1">Patent</a>
-          <a class="button" href="https://quantum.cloud.ibm.com/docs/en/tutorials/real-time-benchmarking-for-qubit-selection#background">Tutorial</a>
-        </p>
-      </div>
+        </footer>
+      </article>
 
-      <div class="card" id="cac">
+      <div class="card" id="cac" tabindex="0">
         <h4>Context-Aware Compiling</h4>
         <p>Mitigating correlated noise at compile time via targeted dynamical decoupling.</p>
-        <p>
+        <footer>
           <a class="button button-primary" href="https://arxiv.org/abs/2403.06852">Paper</a>
-          <a class="button" href="https://docs.quantum.ibm.com/api/qiskit/dev/qiskit.transpiler.passes.ContextAwareDynamicalDecoupling">API</a>
-        </p>
-      </div>
+        </footer>
+      </article>
 
-        <div class="card" id="drldesign">
+        <div class="card" id="drldesign" tabindex="0">
           <h4>Error-Robust Gate-Set Design</h4>
           <p>Using deep reinforcement learning and black-box optimization to autonomously calibrate high-fidelity gates.</p>
-          <p>
+          <footer>
             <a class="button button-primary" href="https://doi.org/10.1103/PRXQuantum.2.040324">Paper</a>
-            <a class="button" href="https://docs.q-ctrl.com/fire-opal">Docs</a>
-          </p>
-        </div>
+          </footer>
+        </article>
 
       </div> <!-- end card-grid -->
 
@@ -101,14 +95,13 @@
       <p>At the heart of many superconducting devices is a tunable qubit-cavity coupling. My doctoral work focused on non-adiabatic effects, the dynamical Lamb and Casimir effects, arising during fast qubit driving. Modeling of superconducting circuits shows that these effects can be used to generate entanglement and perform ultra-fast quantum gates.</p>
 
       <div class="card-grid">
-      <div class="card" id="qed-thesis">
+      <div class="card" id="qed-thesis" tabindex="0">
         <h4>Dynamical Lamb effect</h4>
         <p>Entanglement generation in non-stationary cavity QED via the dynamical Lamb effect.</p>
-        <p>
+        <footer>
           <a class="button button-primary" href="https://academicworks.cuny.edu/gc_etds/3699/">Thesis</a>
-          <a class="button" href="https://github.com/miamico/dynamical-Lamb-effect">Code</a>
-        </p>
-      </div>
+        </footer>
+      </article>
       </div> <!-- end card-grid -->
     </section>
 
