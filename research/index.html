@@ -107,7 +107,12 @@
 
     <section id="publications">
       <h2>Publications &amp; Preprints</h2>
-      <input type="text" id="pubFilter" placeholder="Filter publications" class="u-full-width">
+      <select id="tagFilter" class="u-full-width">
+        <option value="">All tags</option>
+        <option value="mitigation">Mitigation</option>
+        <option value="algorithms">Algorithms</option>
+        <option value="qed">QED</option>
+      </select>
       <ul id="pubList">
         <li data-tags="mitigation"><strong>2025</strong> – M. Amico <em>et al.</em>, <a href="https://patents.google.com/patent/US20250165836A1">Sparse noise tomography‑based qubit mapping</a>, US Patent 20250165836A1. <span class="tag">Mitigation</span></li>
 
@@ -137,12 +142,13 @@
   </div>
 
 <script>
-const input = document.getElementById('pubFilter');
-if(input){
-  input.addEventListener('input', function(){
-    const term = this.value.toLowerCase();
+const select = document.getElementById('tagFilter');
+if(select){
+  select.addEventListener('change', function(){
+    const tag = this.value.toLowerCase();
     document.querySelectorAll('#pubList li').forEach(li => {
-      li.style.display = li.textContent.toLowerCase().includes(term) ? '' : 'none';
+      const tags = li.dataset.tags || '';
+      li.style.display = !tag || tags.toLowerCase().includes(tag) ? '' : 'none';
     });
   });
 }
