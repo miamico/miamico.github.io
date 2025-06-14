@@ -439,12 +439,14 @@ a:hover {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
+  justify-items: center;
 }
 
 .card-grid .card {
   margin-bottom: 0;
+  max-width: 200px;
 }
 .tag {
   display: inline-block;
