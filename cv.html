@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <style>
     /* --------------------------------------------------------- */
-    /* Vertical timeline layout (cleaner)                        */
+    /* Vertical timeline layout                                  */
     /* --------------------------------------------------------- */
     .timeline {
       position: relative;
@@ -30,13 +30,13 @@
       margin-bottom: 3rem;
     }
     .timeline-item:last-child { margin-bottom: 0; }
-    /* Remove the blue dot that overlapped years */
+    /* Remove the blue dot */
     .timeline-item:before { display: none; }
 
     .period {
       font-weight: 600;
-      margin-bottom: 0.2rem;
       display: block;
+      margin-bottom: 0.2rem;
     }
 
     .role {
@@ -58,12 +58,13 @@
     }
 
     .project-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      list-style-type: disc;
+      list-style-position: inside;
+      margin: 0.2rem 0 0.75rem 1rem;
+      padding-left: 0;
     }
     .project-list li {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.55rem;
     }
 
     /* Tiny link buttons */
@@ -105,10 +106,10 @@
       <div class="timeline-item">
         <span class="period">Sep&nbsp;2023 – Present</span>
         <h3 class="role">Technical Lead</h3>
-        <div class="affiliation">IBM Quantum</div>
-        <p class="summary">Leading a small cross‑functional team delivering next‑generation error‑mitigation and compilation tools for IBM’s 100‑qubit class processors. Responsible for roadmap, design reviews, and mentoring junior researchers.</p>
+        <div class="affiliation">IBM Quantum</div>
+        <p class="summary">Leading a cross‑disciplinary team delivering next‑gen error‑mitigation and compilation tools for IBM’s 100‑qubit processors. Responsible for roadmap, architecture reviews, and mentoring junior researchers.</p>
         <ul class="project-list">
-          <li>Krylov Quantum Diagonalization — randomised eigensolver for chemistry simulations <a class="btn" href="https://arxiv.org/abs/2407.14431">paper</a> <a class="btn" href="https://quantum.ibm.com/docs/tutorials/krylov-quantum-diagonalization">code</a></li>
+          <li>Krylov Quantum Diagonalization — randomised eigensolver for chemistry simulations <a class="btn" href="https://arxiv.org/abs/2407.14431">paper</a> <a class="btn" href="https://quantum.ibm.com/docs/tutorials/krylov-quantum-diagonalization">code</a></li>
           <li>Tensor‑Network‑Enhanced MPF — scalable noisy‑VQE post‑processing <a class="btn" href="https://arxiv.org/abs/2407.17405">paper</a></li>
           <li>Context‑Aware Compiling — latency‑aware transpiler passes <a class="btn" href="https://arxiv.org/abs/2403.06852">paper</a></li>
         </ul>
@@ -118,10 +119,10 @@
       <div class="timeline-item">
         <span class="period">Jan&nbsp;2022 – Sep&nbsp;2023</span>
         <h3 class="role">Research Scientist</h3>
-        <div class="affiliation">IBM Quantum</div>
-        <p class="summary">Developed model‑free readout‑error‑mitigation techniques adopted across the IBM Quantum fleet; published three first‑author papers and obtained two patents on error analytics.</p>
+        <div class="affiliation">IBM Quantum</div>
+        <p class="summary">Developed model‑free readout‑error‑mitigation techniques deployed fleet‑wide; published three first‑author papers and filed two patents on error analytics.</p>
         <ul class="project-list">
-          <li>Readout‑Error Mitigation Toolkit — open‑sourced pipeline <a class="btn" href="#">docs</a></li>
+          <li>Readout‑Error Mitigation Toolkit — open‑source pipeline <a class="btn" href="#">docs</a></li>
           <li>Generalised Surprisal Extrapolation (GSE) — bias removal method <a class="btn" href="#">paper</a></li>
         </ul>
       </div>
@@ -131,7 +132,7 @@
         <span class="period">Jan&nbsp;2020 – Jan&nbsp;2022</span>
         <h3 class="role">Senior Quantum Control Engineer</h3>
         <div class="affiliation">Q‑CTRL</div>
-        <p class="summary">Designed and optimised robust control pulses using reinforcement learning, doubling gate fidelities on superconducting qubits and integrating the toolchain into Q‑CTRL’s product suite.</p>
+        <p class="summary">Designed robust control pulses using reinforcement learning, doubling gate fidelities on superconducting qubits and integrating the toolchain into Q‑CTRL’s commercial suite.</p>
         <ul class="project-list">
           <li>Deep‑RL pulse optimisation — ×2 fidelity gain <a class="btn" href="#">paper</a></li>
           <li>Multi‑qubit pulse‑level simulator — validated RL strategies <a class="btn" href="#">code</a></li>
@@ -142,7 +143,7 @@
       <div class="timeline-item">
         <span class="period">2016 – 2020</span>
         <h3 class="role">Ph.D. Candidate, Physics</h3>
-        <div class="affiliation">City University of New York</div>
+        <div class="affiliation">City University of New York</div>
         <p class="summary">Investigated non‑stationary cavity QED phenomena, focusing on entanglement generation via the dynamical Lamb effect and decoherence‑free subspaces.</p>
         <ul class="project-list">
           <li>Dynamical Lamb Effect entanglement generation <a class="btn" href="https://doi.org/10.1103/PhysRevA.100.013841">paper</a></li>
@@ -153,20 +154,20 @@
       <div class="timeline-item">
         <span class="period">2014 – 2016</span>
         <h3 class="role">M.Sc. Physics</h3>
-        <div class="affiliation">University of Milan</div>
+        <div class="affiliation">University of Milan</div>
         <p class="summary">Master’s thesis on quantum error‑correction thresholds in surface‑code architectures with realistic crosstalk noise.</p>
       </div>
 
       <div class="timeline-item">
         <span class="period">2010 – 2013</span>
         <h3 class="role">B.Sc. Engineering Physics</h3>
-        <div class="affiliation">Politecnico di Milano</div>
+        <div class="affiliation">Politecnico di Milano</div>
         <p class="summary">Coursework covered statistical physics, electronics, and numerical methods; capstone project on FPGA‑based random‑number generators.</p>
       </div>
 
     </section>
 
-    <footer><hr><small>Last updated 2025 • © Mirko Amico</small></footer>
+    <footer><hr><small>Last updated 2025 • © Mirko Amico</small></footer>
   </div>
 </body>
 </html>
