@@ -37,20 +37,6 @@
     <section id="algorithms">
       <h2>Quantum algorithms</h2>
       <p>I develop and implement quantum algorithms to measure quantities of interest, stay within the coherence budget of noisy hardware. Highlights include Krylov-subspace diagonalisation of ~50-site spin lattices, the first experimental extraction of conformal-field-theory central charge on a universal processor, and early demonstrations that qubit-level matched filtering can recover astrophysical signals at classical signal-to-noise ratios. All of these share a guiding principle: pair modest quantum circuits with classical post-processing to reach classically intractable regimes sooner.</p>
-    </section>
-
-    <section id="mitigation">
-      <h2>Error suppression and mitigation</h2>
-      <p>Reliable algorithms require hardware-aware error suppression and mitigation. I build tools for: autonomous calibration of control pulses based on deep‑reinforcement‑learning and black-box optimization techniques; compiler techniques to reduce crosstalk via dynamical decoupling sequences; qubit selection protocols based on efficient sparse-noise tomography to execute the algorithm on the best performing qubits. These ideas extend into algorithmic space: I've recently started to explore tensor-network-assisted algorithm implementation, like multiproduct formulas, to improve performance without sacrificing circuit depth. Across all projects the aim is the same: suppress dominant errors <em>in situ</em> so mitigation overhead stays manageable.</p>
-    </section>
-
-    <section id="qed">
-      <h2>Non-stationary cavity QED</h2>
-      <p>At the heart of many superconducting devices is a tunable qubit-cavity coupling. My doctoral work focused on non-adiabatic effects, the dynamical Lamb and Casimir effects, arising during fast qubit driving. Modeling of superconducting circuits shows that these effects can be used to generate entanglement and perform ultra-fast quantum gates.</p>
-    </section>
-
-    <section id="highlights">
-      <h2>Highlights</h2>
 
       <div class="card" id="kqd">
         <h4>Krylov Quantum Diagonalization — 2024</h4>
@@ -69,6 +55,29 @@
           <a class="button" href="https://github.com/Qiskit/qiskit-addon-mpf">Code / Package</a>
         </p>
       </div>
+    </section>
+
+    <section id="mitigation">
+      <h2>Error suppression and mitigation</h2>
+      <p>Reliable algorithms require hardware-aware error suppression and mitigation. I build tools for: autonomous calibration of control pulses based on deep‑reinforcement‑learning and black-box optimization techniques; compiler techniques to reduce crosstalk via dynamical decoupling sequences; qubit selection protocols based on efficient sparse-noise tomography to execute the algorithm on the best performing qubits. These ideas extend into algorithmic space: I've recently started to explore tensor-network-assisted algorithm implementation, like multiproduct formulas, to improve performance without sacrificing circuit depth. Across all projects the aim is the same: suppress dominant errors <em>in situ</em> so mitigation overhead stays manageable.</p>
+
+      <div class="card" id="pec">
+        <h4>Probabilistic Error Cancellation &amp; Amplification</h4>
+        <p>Toolkit for modeling device noise and reconstructing unbiased expectation values using quasi-probability techniques.</p>
+        <p>
+          <a class="button" href="https://docs.quantum.ibm.com/guides/error-mitigation-and-suppression-techniques">Code / Docs</a>
+          <a class="button" href="https://quantum.cloud.ibm.com/docs/en/tutorials/probabilistic-error-amplification">Code / Tutorial</a>
+        </p>
+      </div>
+
+      <div class="card" id="qubits">
+        <h4>Noise-Aware Qubit Selection — 2025</h4>
+        <p>Choosing the best qubits using sparse noise tomography or aggregated error metrics.</p>
+        <p>
+          <a class="button button-primary" href="https://patents.google.com/patent/US20250165836A1">Patent</a>
+          <a class="button" href="https://quantum.cloud.ibm.com/docs/en/tutorials/real-time-benchmarking-for-qubit-selection#background">Tutorial</a>
+        </p>
+      </div>
 
       <div class="card" id="cac">
         <h4>Context-Aware Compiling — 2024</h4>
@@ -79,7 +88,21 @@
         </p>
       </div>
 
+      <div class="card" id="drldesign">
+        <h4>Error-Robust Gate-Set Design — 2021</h4>
+        <p>Using deep reinforcement learning and black-box optimization to autonomously calibrate high-fidelity gates.</p>
+        <p>
+          <a class="button button-primary" href="https://doi.org/10.1103/PRXQuantum.2.040324">Paper</a>
+          <a class="button" href="https://docs.q-ctrl.com/fire-opal">Docs (Fire Opal)</a>
+        </p>
+      </div>
     </section>
+
+    <section id="qed">
+      <h2>Non-stationary cavity QED</h2>
+      <p>At the heart of many superconducting devices is a tunable qubit-cavity coupling. My doctoral work focused on non-adiabatic effects, the dynamical Lamb and Casimir effects, arising during fast qubit driving. Modeling of superconducting circuits shows that these effects can be used to generate entanglement and perform ultra-fast quantum gates.</p>
+    </section>
+
 
     <section id="publications">
       <h2>Publications &amp; Preprints</h2>
