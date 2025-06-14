@@ -2,16 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Mirko Amico – Quantum Computing</title>
+  <title>Mirko Amico - Quantum Computing</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/skeleton.css"><!-- Skeleton core -->
-  <link rel="stylesheet" href="css/styles.css"><!-- your tweaks -->
+  <!-- Skeleton 2.0.4 via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* simple avatar float that collapses on narrow screens */
+    .avatar {max-width:120px;border-radius:50%;margin-right:1rem;float:left}
+    @media (max-width:600px){.avatar{float:none;display:block;margin:0 auto 1rem}}
+  </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Mirko Amico</h1>
-      <p>Quantum Computing Researcher | IBM</p>
+      <h1>Mirko&nbsp;Amico</h1>
+      <p>Quantum Algorithms · Error Mitigation · Benchmarking</p>
       <nav>
         <a href="index.html">Home</a> ·
         <a href="research.html">Research</a> ·
@@ -23,16 +29,40 @@
       <hr>
     </header>
 
+    <!-- --- Intro block with picture ------------------------------------ -->
     <section>
-      <h2>Welcome 👋</h2>
-      <p>I develop quantum-control techniques and algorithms to push noisy
-      quantum processors toward practical advantage.</p>
+      <img src="assets/images/avatar.jpg" alt="Mirko Amico portrait" class="avatar">
+      <p>
+        I am a quantum-computing researcher focused on turning today's noisy
+        superconducting processors into reliable scientific instruments.
+        My work spans:
+      </p>
+      <ul>
+        <li><strong>Quantum algorithms</strong> to tackle many-body physics.</li>
+        <li><strong>Error suppression &amp; mitigation</strong> — from pulse
+            design to context-aware compiling — that lift gate fidelity in situ.</li>
+        <li><strong>Benchmarking</strong> rules and scalable mirror-circuit tests to make
+            cross-platform results comparable.</li>
+        <li><strong>Non-stationary cavity QED</strong> studies, including the
+            dynamical Lamb effect, investigating the role of non-adiabatic effects in quantum information processing.</li>
+      </ul>
+      <p>
+        I currently work with superconducting qubit devices and collaborate
+        broadly across academia and industry to push quantum advantage closer.
+      </p>
     </section>
 
-    <footer>
-      <hr>
-      <small>&copy; 2025 Mirko Amico · <a href="https://github.com/miamico">GitHub</a></small>
-    </footer>
+    <!-- --- Teaser links -------------------------------------------------- -->
+    <section>
+      <h2>Latest highlights</h2>
+      <ul>
+        <li><a href="https://arxiv.org/abs/2407.14431">Krylov Quantum Diagonalization</a> (2024)</li>
+        <li><a href="https://arxiv.org/abs/2407.17405">Tensor-network-enhanced time evolution</a> (2024)</li>
+        <li><a href="https://arxiv.org/abs/2403.06852">Context-aware compiling for correlated noise</a> (2024)</li>
+      </ul>
+    </section>
+
+    <footer><hr><small>&copy; 2025 Mirko Amico</small></footer>
   </div>
 </body>
 </html>
