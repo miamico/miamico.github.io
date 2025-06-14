@@ -425,8 +425,11 @@ a:hover {
   text-decoration: underline;
 }
 .card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   border: 1px solid #B0B0B0;
-  padding: 0.8rem;
+  padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.04);
@@ -434,6 +437,7 @@ a:hover {
 }
 
 .card:hover,
+<<<<<<< HEAD
 .card:focus-visible {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -442,6 +446,10 @@ a:hover {
 .card:focus-within {
   outline: 2px solid #5567ff;
   outline-offset: 2px;
+=======
+.card:focus-within {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+>>>>>>> master
 }
 
 .card h4 {
@@ -451,18 +459,13 @@ a:hover {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   justify-items: center;
 }
 
 .card-grid .card {
   margin-bottom: 0;
-  max-width: 200px;
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .tag {
   display: inline-block;
@@ -472,6 +475,19 @@ a:hover {
   font-size:.7rem;
   margin-left:.4rem;
 }
+
+.chip {
+  display:inline-block;
+  padding:0 .4rem;
+  font-size:.7rem;
+  border-radius:9999px;
+  margin-right:.4rem;
+  background:#eef;
+}
+.chip.paper  { background:#d0ebff; color:#003366; }
+.chip.code   { background:#e6ffe7; color:#004d1a; }
+.chip.talk   { background:#ffe7d6; color:#663300; }
+.chip.patent { background:#f5e6ff; color:#330033; }
 
 /* Publication filter pills */
 .pill {
@@ -515,9 +531,13 @@ html.dark a:hover { color:#b3e5ff; }
 html.dark hr { border-top-color:#444; }
 html.dark .card { border-color:#444; background:#1b1b1b; box-shadow:0 2px 4px rgba(0,0,0,0.6); }
 html.dark .card:hover,
+<<<<<<< HEAD
 html.dark .card:focus-visible {
   box-shadow: 0 4px 8px rgba(0,0,0,0.8);
 }
+=======
+html.dark .card:focus-within { box-shadow:0 4px 8px rgba(0,0,0,0.8); }
+>>>>>>> master
 html.dark .tag { color:#000; }
 html.dark input,
 html.dark textarea,
