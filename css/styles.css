@@ -312,7 +312,7 @@ code {
   font-size: 90%;
   white-space: nowrap;
   background: #F1F1F1;
-  border: 1px solid #E1E1E1;
+  border: 1px solid #B0B0B0;
   border-radius: 4px; }
 pre > code {
   display: block;
@@ -326,7 +326,7 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid #B0B0B0; }
 th:first-child,
 td:first-child {
   padding-left: 0; }
@@ -377,7 +377,7 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #E1E1E1; }
+  border-top: 1px solid #B0B0B0; }
 
 
 /* Clearing
@@ -419,7 +419,7 @@ there.
 /* --- Custom tweaks --- */
 p { max-width: 70ch; }
 .card {
-  border: 1px solid #E1E1E1;
+  border: 1px solid #B0B0B0;
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 6px;
