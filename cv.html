@@ -101,68 +101,92 @@
 
     <!-- ============================ Timeline ============================ -->
     <section class="timeline">
+    <!-- ---------- Experience ---------------------------------------------- -->
 
-      <!-- --------------- Technical Lead --------------------------------- -->
-      <div class="timeline-item">
-        <span class="period">Sep&nbsp;2023 – Present</span>
-        <h3 class="role">Technical Lead</h3>
-        <div class="affiliation">IBM Quantum</div>
-        <p class="summary">Leading a cross‑disciplinary team delivering next‑gen error‑mitigation and compilation tools for IBM’s 100‑qubit processors. Responsible for roadmap, architecture reviews, and mentoring junior researchers.</p>
-        <ul class="project-list">
-          <li>Krylov Quantum Diagonalization — randomised eigensolver for chemistry simulations <a class="btn" href="https://arxiv.org/abs/2407.14431">paper</a> <a class="btn" href="https://quantum.ibm.com/docs/tutorials/krylov-quantum-diagonalization">code</a></li>
-          <li>Tensor‑Network‑Enhanced MPF — scalable noisy‑VQE post‑processing <a class="btn" href="https://arxiv.org/abs/2407.17405">paper</a></li>
-          <li>Context‑Aware Compiling — latency‑aware transpiler passes <a class="btn" href="https://arxiv.org/abs/2403.06852">paper</a></li>
-        </ul>
-      </div>
+    <div class="timeline-entry">
+      <time>Sep&nbsp;2023 - Present</time>
+      <h3>Technical Lead, <span class="affil">IBM Quantum</span></h3>
+      <p>
+        Drive the Quantum Algorithm Engineering roadmap and provide technical guidance to the
+        team delivering client demonstrations towards quantum advantage. Product owner of<a href='https://quantum.cloud.ibm.com/docs/en/tutorials'><em>IBM Quantum Tutorials</em></a>. 
+      </p>
+      <ul>
+        <li>Krylov Quantum Diagonalization - low-energy spectra of strongly correlated quantum systems
+            (<a href="https://arxiv.org/abs/2407.14431">paper</a>,
+            <a href="https://quantum.cloud.ibm.com/docs/tutorials/krylov-quantum-diagonalization">tutorial</a>) 
+        </li>
+        <li>Tensor-Network-enhanced MPF - compressed time-evolution of quantum systems
+            (<a href="https://arxiv.org/abs/2407.17405">paper</a>,
+            <a href="https://github.com/Qiskit/qiskit-addon-mpf">code</a>)
+        </li>
+      </ul>
+    </div>
 
-      <!-- --------------- Research Scientist ----------------------------- -->
-      <div class="timeline-item">
-        <span class="period">Jan&nbsp;2022 – Sep&nbsp;2023</span>
-        <h3 class="role">Research Scientist</h3>
-        <div class="affiliation">IBM Quantum</div>
-        <p class="summary">Developed model‑free readout‑error‑mitigation techniques deployed fleet‑wide; published three first‑author papers and filed two patents on error analytics.</p>
-        <ul class="project-list">
-          <li>Readout‑Error Mitigation Toolkit — open‑source pipeline <a class="btn" href="#">docs</a></li>
-          <li>Generalised Surprisal Extrapolation (GSE) — bias removal method <a class="btn" href="#">paper</a></li>
-        </ul>
-      </div>
+    <div class="timeline-entry">
+      <time>Jan 2022 - Sep 2023</time>
+      <h3>Research Scientist, <span class="affil">IBM Quantum</span></h3>
+      <p>
+        Develop, implement and benchmark novel error suppression and mitigation techniques for large-scale demonstrations of quantum algorithms.
+      </p>
+      <ul>
+        <li>Context-Aware Compiling - error suppression at the compiler level
+          (<a href="https://arxiv.org/abs/2403.06852">paper</a>, <a href="https://docs.quantum.ibm.com/api/qiskit/dev/qiskit.transpiler.passes.ContextAwareDynamicalDecoupling">code/api</a>)</li>
+        <li>Probabilistic Error Cancellation and Amplification package - efficient software implementation
+            (<a href="https://docs.quantum.ibm.com/guides/error-mitigation-and-suppression-techniques">docs</a>)</li>
+        <li>Sparse noise-tomography qubit mapper - hardware-aware qubit selection
+            (<a href="https://patentguru.com/US20250165836A1">patent</a>)</li>
+        <li>Measuring central charge - algorithm demonstration
+              (<a href="https://arxiv.org/abs/2408.06342">paper</a>)</li>
+        <li>Defining best practices for quantum benchmarks - effects of error mitigation on benchmarking 
+                (<a href="https://ieeexplore.ieee.org/abstract/document/10313904">paper</a>)</li>
+      </ul>
+    </div>
 
-      <!-- --------------- Senior Quantum Control Engineer ---------------- -->
-      <div class="timeline-item">
-        <span class="period">Jan&nbsp;2020 – Jan&nbsp;2022</span>
-        <h3 class="role">Senior Quantum Control Engineer</h3>
-        <div class="affiliation">Q‑CTRL</div>
-        <p class="summary">Designed robust control pulses using reinforcement learning, doubling gate fidelities on superconducting qubits and integrating the toolchain into Q‑CTRL’s commercial suite.</p>
-        <ul class="project-list">
-          <li>Deep‑RL pulse optimisation — ×2 fidelity gain <a class="btn" href="#">paper</a></li>
-          <li>Multi‑qubit pulse‑level simulator — validated RL strategies <a class="btn" href="#">code</a></li>
-        </ul>
-      </div>
+    <div class="timeline-entry">
+      <time>Jan 2020 - Jan 2022</time>
+      <h3>Senior Quantum Control Engineer, <span class="affil">Q-CTRL</span></h3>
+      <p>
+        Design, simulate and implement machine-learning based pulse calibration techniques to increase performance of qubit controls (higher fidelity, lower duration).
+      </p>
+      <ul>
+        <li>Deep-RL pulse optimization (<a href="https://doi.org/10.1103/PRXQuantum.2.040324">paper</a>, <a href="https://docs.q-ctrl.com/fire-opal">docs</a>)</li>
+      </ul>
+    </div>
+
 
       <!-- --------------- Doctoral Research ------------------------------ -->
       <div class="timeline-item">
-        <span class="period">2016 – 2020</span>
-        <h3 class="role">Ph.D. Candidate, Physics</h3>
+        <span class="period">2016 - 2020</span>
+        <h3 class="role">Ph.D. Physics</h3>
         <div class="affiliation">City University of New York</div>
-        <p class="summary">Investigated non‑stationary cavity QED phenomena, focusing on entanglement generation via the dynamical Lamb effect and decoherence‑free subspaces.</p>
+        <p class="summary">Investigated non-stationary cavity QED phenomena, focusing on entanglement generation via the dynamical Lamb effect. Explored algorithm demonstrations on early quantum processros</p>
         <ul class="project-list">
-          <li>Dynamical Lamb Effect entanglement generation <a class="btn" href="https://doi.org/10.1103/PhysRevA.100.013841">paper</a></li>
+          <li>Dynamical Lamb Effect entanglement generation <a class="btn" href="https://academicworks.cuny.edu/gc_etds/3699/">thesis</a></li>
+          <li>Quantum thermodynamics on a quantum processor <a class="btn" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.103.L060202">paper</a></li>
+          <li>Quantum algorithm for simulating a multipath interferometer <a class="btn" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.102.032605">paper</a></li>
+          <li>Small scale demonstration of Shor's algorithm <a class="btn" href="https://doi.org/10.1103/PhysRevA.100.012305">paper</a></li>
         </ul>
       </div>
 
       <!-- --------------- Education (MSc & BSc) -------------------------- -->
       <div class="timeline-item">
-        <span class="period">2014 – 2016</span>
+        <span class="period">2014 - 2016</span>
         <h3 class="role">M.Sc. Physics</h3>
         <div class="affiliation">University of Milan</div>
-        <p class="summary">Master’s thesis on quantum error‑correction thresholds in surface‑code architectures with realistic crosstalk noise.</p>
+        <p class="summary">Specialization in high energy physics and quantum field theory.</p>
+        <ul class="project-list">
+          <li>Equations of motions of supergravity theories <a class="btn" href="">thesis</a></li>
+        </ul>
       </div>
 
       <div class="timeline-item">
-        <span class="period">2010 – 2013</span>
+        <span class="period">2010 - 2013</span>
         <h3 class="role">B.Sc. Engineering Physics</h3>
         <div class="affiliation">Politecnico di Milano</div>
-        <p class="summary">Coursework covered statistical physics, electronics, and numerical methods; capstone project on FPGA‑based random‑number generators.</p>
+        <p class="summary">Applied physics with a focus on laser physics and quantum optics.</p>
+        <ul class="project-list">
+          <li>Pump-probe spectroscopy for materials characterization <a class="btn" href="">thesis</a></li>
+        </ul>
       </div>
 
     </section>
