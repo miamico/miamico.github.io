@@ -1,0 +1,24 @@
+name: HTML Lint
+
+on:
+  pull_request:
+
+jobs:
+  html5validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install html5validator
+        run: pip install html5validator
+      - name: Validate HTML files
+        run: html5validator --root .
+
