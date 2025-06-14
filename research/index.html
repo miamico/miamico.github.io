@@ -29,6 +29,7 @@
       <h2>Quantum algorithms</h2>
       <p>I develop and implement quantum algorithms to measure quantities of interest, stay within the coherence budget of noisy hardware. Highlights include Krylov-subspace diagonalisation of ~50-site spin lattices, the first experimental extraction of conformal-field-theory central charge on a universal processor, and early demonstrations that qubit-level matched filtering can recover astrophysical signals at classical signal-to-noise ratios. All of these share a guiding principle: pair modest quantum circuits with classical post-processing to reach classically intractable regimes sooner.</p>
 
+      <div class="card-grid">
       <div class="card" id="kqd">
         <h4>Krylov Quantum Diagonalization</h4>
         <p>Diagonalizing large many-body Hamiltonians via shallow Trotter circuits and classical post-processing.</p>
@@ -37,6 +38,7 @@
           <a class="button" href="https://quantum.cloud.ibm.com/docs/tutorials/krylov-quantum-diagonalization">Code / Tutorial</a>
         </p>
       </div>
+      </div> <!-- end card-grid -->
 
     </section>
 
@@ -44,6 +46,7 @@
       <h2>Error suppression and mitigation</h2>
       <p>Reliable algorithms require hardware-aware error suppression and mitigation. I build tools for: autonomous calibration of control pulses based on deep‑reinforcement‑learning and black-box optimization techniques; compiler techniques to reduce crosstalk via dynamical decoupling sequences; qubit selection protocols based on efficient sparse-noise tomography to execute the algorithm on the best performing qubits. These ideas extend into algorithmic space: I've recently started to explore tensor-network-assisted algorithm implementation, like multiproduct formulas, to improve performance without sacrificing circuit depth. Across all projects the aim is the same: suppress dominant errors <em>in situ</em> so mitigation overhead stays manageable.</p>
 
+      <div class="card-grid">
       <div class="card" id="mpf">
         <h4>Tensor-network-enhanced MPF</h4>
         <p>Compressing time-evolution circuits using multiproduct formulas assisted by tensor networks.</p>
@@ -89,12 +92,15 @@
           </p>
         </div>
 
-      </section>
+      </div> <!-- end card-grid -->
+
+    </section>
 
     <section id="qed">
       <h2>Non-stationary cavity QED</h2>
       <p>At the heart of many superconducting devices is a tunable qubit-cavity coupling. My doctoral work focused on non-adiabatic effects, the dynamical Lamb and Casimir effects, arising during fast qubit driving. Modeling of superconducting circuits shows that these effects can be used to generate entanglement and perform ultra-fast quantum gates.</p>
 
+      <div class="card-grid">
       <div class="card" id="qed-thesis">
         <h4>Dynamical Lamb effect</h4>
         <p>Student research on entanglement generation via the dynamical Lamb effect.</p>
@@ -103,6 +109,7 @@
           <a class="button" href="https://github.com/miamico/dynamical-Lamb-effect">Code</a>
         </p>
       </div>
+      </div> <!-- end card-grid -->
     </section>
 
 
