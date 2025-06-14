@@ -44,6 +44,15 @@
       <h2>Error suppression and mitigation</h2>
       <p>Reliable algorithms require hardware-aware error suppression and mitigation. I build tools for: autonomous calibration of control pulses based on deep‑reinforcement‑learning and black-box optimization techniques; compiler techniques to reduce crosstalk via dynamical decoupling sequences; qubit selection protocols based on efficient sparse-noise tomography to execute the algorithm on the best performing qubits. These ideas extend into algorithmic space: I've recently started to explore tensor-network-assisted algorithm implementation, like multiproduct formulas, to improve performance without sacrificing circuit depth. Across all projects the aim is the same: suppress dominant errors <em>in situ</em> so mitigation overhead stays manageable.</p>
 
+      <div class="card" id="mpf">
+        <h4>Tensor-network-enhanced MPF</h4>
+        <p>Compressing time-evolution circuits using multiproduct formulas assisted by tensor networks.</p>
+        <p>
+          <a class="button button-primary" href="https://arxiv.org/abs/2407.17405">Paper</a>
+          <a class="button" href="https://github.com/Qiskit/qiskit-addon-mpf">Code / Package</a>
+        </p>
+      </div>
+
       <div class="card" id="pec">
         <h4>Probabilistic Error Cancellation &amp; Amplification</h4>
         <p>Toolkit for modeling device noise and reconstructing unbiased expectation values using quasi-probability techniques.</p>
@@ -80,14 +89,6 @@
           </p>
         </div>
 
-        <div class="card" id="mpf">
-          <h4>Tensor-network-enhanced MPF</h4>
-          <p>Compressing time-evolution circuits using multiproduct formulas assisted by tensor networks.</p>
-          <p>
-            <a class="button button-primary" href="https://arxiv.org/abs/2407.17405">Paper</a>
-            <a class="button" href="https://github.com/Qiskit/qiskit-addon-mpf">Code / Package</a>
-          </p>
-        </div>
       </section>
 
     <section id="qed">
