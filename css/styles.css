@@ -433,6 +433,14 @@ p { max-width: 70ch; }
   font-size:.7rem;
   margin-left:.4rem;
 }
+.theme-toggle {
+  background:none;
+  border:none;
+  font-size:1.5rem;
+  cursor:pointer;
+  line-height:1;
+  padding:0;
+}
 .back-to-top {
   position: fixed;
   bottom: 1rem;
