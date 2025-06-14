@@ -454,6 +454,23 @@ a:hover {
   font-size:.7rem;
   margin-left:.4rem;
 }
+
+/* Publication filter pills */
+.pill {
+  display:inline-block;
+  padding:0.3rem 0.6rem;
+  margin:0 0.3rem 0.6rem 0;
+  border:1px solid #bbb;
+  border-radius:9999px;
+  background:#f7f7f7;
+  cursor:pointer;
+  font-size:0.8rem;
+}
+.pill.active{
+  background:#5567ff;
+  color:#fff;
+  border-color:#5567ff;
+}
 .theme-toggle {
   background:none;
   border:none;
@@ -486,6 +503,14 @@ html.dark select {
   background:#222;
   color:#e0e0e0;
   border-color:#555;
+}
+html.dark .pill {
+  background:#333;
+  border-color:#555;
+}
+html.dark .pill.active{
+  background:#8899ff;
+  border-color:#8899ff;
 }
 html.dark code {
   background:#222;

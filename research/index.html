@@ -115,12 +115,12 @@
 
     <section id="publications">
       <h2>Publications &amp; Preprints</h2>
-      <select id="tagFilter" class="u-full-width">
-        <option value="">All tags</option>
-        <option value="mitigation">Mitigation</option>
-        <option value="algorithms">Algorithms</option>
-        <option value="qed">QED</option>
-      </select>
+      <div id="tagFilters" class="u-full-width">
+        <span class="pill active" data-tag="">All</span>
+        <span class="pill" data-tag="mitigation">Mitigation</span>
+        <span class="pill" data-tag="algorithms">Algorithms</span>
+        <span class="pill" data-tag="qed">QED</span>
+      </div>
       <ul id="pubList">
         <li data-tags="mitigation"><strong>2025</strong> – M. Amico <em>et al.</em>, <a href="https://patents.google.com/patent/US20250165836A1">Sparse noise tomography‑based qubit mapping</a>, US Patent 20250165836A1. <span class="tag">Mitigation</span></li>
 
@@ -150,16 +150,39 @@
   </div>
 
 <script>
-const select = document.getElementById('tagFilter');
-if(select){
-  select.addEventListener('change', function(){
-    const tag = this.value.toLowerCase();
-    document.querySelectorAll('#pubList li').forEach(li => {
-      const tags = li.dataset.tags || '';
-      li.style.display = !tag || tags.toLowerCase().includes(tag) ? '' : 'none';
-    });
+const pills = document.querySelectorAll('#tagFilters .pill');
+const allPill = document.querySelector('#tagFilters .pill[data-tag=""]');
+const selected = new Set();
+
+function filterPubs(){
+  document.querySelectorAll('#pubList li').forEach(li => {
+    const tags = (li.dataset.tags || '').toLowerCase();
+    const show = selected.size === 0 || [...selected].some(t => tags.includes(t));
+    li.style.display = show ? '' : 'none';
   });
 }
+
+pills.forEach(pill => pill.addEventListener('click', () => {
+  const tag = pill.dataset.tag.toLowerCase();
+  if(tag === ''){
+    selected.clear();
+    pills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+  } else {
+    pill.classList.toggle('active');
+    if(pill.classList.contains('active')){
+      selected.add(tag);
+    } else {
+      selected.delete(tag);
+    }
+    if(selected.size === 0){
+      allPill.classList.add('active');
+    } else {
+      allPill.classList.remove('active');
+    }
+  }
+  filterPubs();
+}));
 </script>
 <script src="/js/theme-toggle.js"></script>
 </body>
