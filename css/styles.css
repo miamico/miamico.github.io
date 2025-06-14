@@ -416,3 +416,33 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+/* --- Custom tweaks --- */
+p { max-width: 70ch; }
+.card {
+  border: 1px solid #E1E1E1;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tag {
+  display: inline-block;
+  background:#eef;
+  border-radius:9999px;
+  padding:0 .4rem;
+  font-size:.7rem;
+  margin-left:.4rem;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: .8rem;
+}
+.toc {
+  position: sticky;
+  top: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+.toc li { margin-bottom:.4rem; }
