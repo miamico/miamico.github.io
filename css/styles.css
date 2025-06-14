@@ -439,3 +439,28 @@ p { max-width: 70ch; }
   right: 1rem;
   font-size: .8rem;
 }
+
+/* Dark mode overrides */
+html.dark {
+  background:#121212;
+  color:#e0e0e0;
+}
+html.dark body { background:#121212; color:#e0e0e0; }
+html.dark a { color:#80d0ff; }
+html.dark a:hover { color:#b3e5ff; }
+html.dark hr { border-top-color:#444; }
+html.dark .card { border-color:#444; background:#1b1b1b; box-shadow:0 2px 4px rgba(0,0,0,0.6); }
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background:#222;
+  color:#e0e0e0;
+  border-color:#555;
+}
+html.dark code {
+  background:#222;
+  border-color:#333;
+}
+html.dark pre > code {
+  background:#222;
+}
