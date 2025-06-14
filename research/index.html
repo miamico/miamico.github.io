@@ -116,10 +116,10 @@
     <section id="publications">
       <h2>Publications and preprints</h2>
       <div id="tagFilters" class="u-full-width">
-        <span class="pill active" data-tag="">All</span>
-        <span class="pill" data-tag="mitigation">Mitigation</span>
-        <span class="pill" data-tag="algorithms">Algorithms</span>
-        <span class="pill" data-tag="qed">QED</span>
+        <button class="pill active" type="button" data-tag="" aria-pressed="true">All</button>
+        <button class="pill" type="button" data-tag="mitigation" aria-pressed="false">Mitigation</button>
+        <button class="pill" type="button" data-tag="algorithms" aria-pressed="false">Algorithms</button>
+        <button class="pill" type="button" data-tag="qed" aria-pressed="false">QED</button>
       </div>
       <ul id="pubList">
         <li data-tags="mitigation"><strong>2025</strong> - M. Amico <em>et al.</em>, <a href="https://patents.google.com/patent/US20250165836A1">Sparse noise tomography-based qubit mapping</a>, US Patent 20250165836A1. <span class="tag">Mitigation</span></li>
@@ -154,6 +154,10 @@ const pills = document.querySelectorAll('#tagFilters .pill');
 const allPill = document.querySelector('#tagFilters .pill[data-tag=""]');
 const selected = new Set();
 
+function setPressed(el, state){
+  el.setAttribute('aria-pressed', state);
+}
+
 function filterPubs(){
   document.querySelectorAll('#pubList li').forEach(li => {
     const tags = (li.dataset.tags || '').toLowerCase();
@@ -162,27 +166,43 @@ function filterPubs(){
   });
 }
 
-pills.forEach(pill => pill.addEventListener('click', () => {
-  const tag = pill.dataset.tag.toLowerCase();
-  if(tag === ''){
-    selected.clear();
-    pills.forEach(p => p.classList.remove('active'));
-    pill.classList.add('active');
-  } else {
-    pill.classList.toggle('active');
-    if(pill.classList.contains('active')){
-      selected.add(tag);
+pills.forEach(pill => {
+  const toggle = () => {
+    const tag = pill.dataset.tag.toLowerCase();
+    if(tag === ''){
+      selected.clear();
+      pills.forEach(p => {
+        p.classList.remove('active');
+        setPressed(p, false);
+      });
+      pill.classList.add('active');
+      setPressed(pill, true);
     } else {
-      selected.delete(tag);
+      const active = pill.classList.toggle('active');
+      setPressed(pill, active);
+      if(active){
+        selected.add(tag);
+      } else {
+        selected.delete(tag);
+      }
+      if(selected.size === 0){
+        allPill.classList.add('active');
+        setPressed(allPill, true);
+      } else {
+        allPill.classList.remove('active');
+        setPressed(allPill, false);
+      }
     }
-    if(selected.size === 0){
-      allPill.classList.add('active');
-    } else {
-      allPill.classList.remove('active');
+    filterPubs();
+  };
+  pill.addEventListener('click', toggle);
+  pill.addEventListener('keydown', e => {
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      toggle();
     }
-  }
-  filterPubs();
-}));
+  });
+});
 </script>
 <script src="/js/theme-toggle.js"></script>
 </body>
