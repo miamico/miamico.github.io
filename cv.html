@@ -2,48 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>CV – Mirko Amico</title>
+  <title>Curriculum Vitae – Mirko Amico</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* optional tweaks */
+    h2 {margin-top:2.2rem}
+    .dates {float:right;font-weight:bold}
+    @media(max-width:600px){.dates{float:none;display:block}}
+  </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Curriculum Vitae</h1>
-      <nav>
-        <a href="index.html">Home</a> · <a href="research.html">Research</a> ·
-        <a href="publications.html">Publications</a> · <a href="cv.html">CV</a> ·
-        <a href="projects.html">Projects</a> · <a href="contact.html">Contact</a>
-      </nav>
+      <h1>Mirko Amico</h1>
+      <p><a href="mailto:mirko.amico@outlook.com">mirko.amico@outlook.com</a></p>
+      <p>Quantum Algorithms · Error Mitigation · Benchmarking · Cavity QED</p>
       <hr>
     </header>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Ph.D. Physics</strong>, City University of New York (2019)</li>
-        <li><strong>M.Sc. Physics</strong>, University of Milan (2016)</li>
-        <li><strong>B.Sc. Engineering Physics</strong>, Polytechnic University of Milan (2013)</li>
-      </ul>
+    <!-- ---------- Interests ------------------------------------------------ -->
+    <h2>Research interests</h2>
+    <p>Quantum applications · Quantum error mitigation · Classical simulations ·
+       Machine learning · Optimisation</p>
 
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Research Staff Member</strong>, IBM Quantum (2023-present)</li>
-        <li><strong>Research Scientist</strong>, IBM Quantum (2022-2023)</li>
-        <li><strong>Senior Quantum Control Engineer</strong>, Q-CTRL (2020-2022)</li>
-      </ul>
+    <!-- ---------- Experience ---------------------------------------------- -->
+    <h2>Experience</h2>
 
-      <h2>Awards</h2>
-      <ul>
-        <li>Dissertation Year Fellowship, CUNY (2019)</li>
-        <li>IBM Teach Me Quantum Award (2018, 3rd place)</li>
-      </ul>
+    <p class="dates">Sep 2023 – present</p>
+    <strong>Technical Lead</strong>, IBM Quantum  
+    <ul>
+      <li>Direct Quantum Algorithm Engineering initiatives and client-driven demonstrations.</li>
+      <li>Product owner for IBM Quantum Tutorials (strategy, roadmap, author guidance).</li>
+      <li>Coordinate large-scale quantum-advantage experiments with IBM Research.</li>
+    </ul>
 
-      <p><em>Full PDF version available on request.</em></p>
-    </section>
+    <p class="dates">Jan 2022 – Sep 2023</p>
+    <strong>Research Scientist</strong>, IBM Quantum  
+    <ul>
+      <li>Led high-impact demonstrations of quantum applications on real devices.</li>
+      <li>Developed state-of-the-art error-suppression &amp; mitigation (probabilistic error cancellation, readout twirling, GSE).</li>
+      <li>Benchmarked mitigation techniques to unlock higher-scale workloads.</li>
+    </ul>
 
-    <footer><hr><small>&copy; 2025 Mirko Amico</small></footer>
+    <p class="dates">Jan 2020 – Jan 2022</p>
+    <strong>Senior Quantum Control Engineer</strong>, Q-CTRL  
+    <ul>
+      <li>Created a Python package for single- and two-qubit gate optimisation.</li>
+      <li>Built realistic pulse-level simulations for multi-qubit devices.</li>
+      <li>Optimised measurement and gates on superconducting circuits (×3 speed-up, ×2 fidelity gain via RL-based pulses).</li>
+    </ul>
+
+    <!-- ---------- Education ----------------------------------------------- -->
+    <h2>Education</h2>
+    <table style="width:100%">
+      <tr><td>Ph.D. Physics, City University of New York</td><td class="dates">2020</td></tr>
+      <tr><td>M.Sc. Physics, University of Milan</td><td class="dates">2016</td></tr>
+      <tr><td>B.Sc. Engineering Physics, Polytechnic University of Milan</td><td class="dates">2013</td></tr>
+    </table>
+
+    <!-- ---------- Awards --------------------------------------------------- -->
+    <h2>Awards</h2>
+    <ul>
+      <li><strong>Dissertation Year Fellowship</strong>, CUNY (2019)</li>
+      <li>3rd place <strong>IBM “Teach Me Quantum” Award</strong> (2018)</li>
+      <li>Finalist <strong>IBM “Teach Me QISKit” Award</strong> (2018)</li>
+    </ul>
+
+    <!-- ---------- Selected publications -----------------------------------
+    <h2>Selected publications</h2>
+    <ol>
+      <li>N. Yoshioka, <strong>M. Amico</strong>* et al. <em>Diagonalization of large many-body Hamiltonians on a quantum processor</em>. arXiv 2407.14431 (2024)</li>
+      <li>N. F. Robertson, <strong>M. Amico</strong>* et al. <em>Tensor-network-enhanced Dynamic Multiproduct Formulas</em>. arXiv 2407.17405 (2024)</li>
+      <li>A. Seif, <strong>M. Amico</strong>* et al. <em>Suppressing correlated noise via context-aware compiling</em>. arXiv 2403.06852 (2024)</li>
+      <li><strong>M. Amico</strong>* et al. <em>Defining standard strategies for quantum benchmarks</em>. IEEE QCE 2023 (2023)</li>
+      <li>Y. Baum, <strong>M. Amico</strong>* et al. <em>Experimental deep RL for error-robust gate-set design</em>. PRX Quantum 2 040324 (2021)</li>
+    </ol>
+    <p>Full list on <a href="https://scholar.google.com/citations?user=Zalars4AAAAJ&amp;hl=en">Google Scholar</a>.</p> -->
+
+    <footer><hr><small>Last updated 2025 • © Mirko Amico</small></footer>
   </div>
 </body>
 </html>
