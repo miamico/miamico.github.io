@@ -472,3 +472,11 @@ html.dark code {
 html.dark pre > code {
   background:#222;
 }
+
+/* Footer update note */
+footer small {
+  display:block;
+  text-align:center;
+  color:#555;
+  margin-top:1rem;
+}
