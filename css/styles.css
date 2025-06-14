@@ -490,6 +490,10 @@ html.dark pre > code {
 .cta {
   font-size:1.1rem;
   padding:0.6rem 2rem;
+  text-transform:none;
+  letter-spacing:normal;
+  height:auto;
+  line-height:1;
 }
 
 /* Shared components */
