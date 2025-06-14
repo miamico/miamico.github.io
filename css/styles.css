@@ -439,13 +439,3 @@ p { max-width: 70ch; }
   right: 1rem;
   font-size: .8rem;
 }
-.toc {
-  /* The jump menu previously used `position: sticky` so it stayed
-     fixed on screen while scrolling. This caused the menu to overlap
-     the content on long pages, especially on mobile devices. Removing
-     the sticky positioning lets it scroll away with the page. */
-  position: static;
-  list-style: none;
-  padding-left: 0;
-}
-.toc li { margin-bottom:.4rem; }
