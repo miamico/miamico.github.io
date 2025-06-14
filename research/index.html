@@ -22,17 +22,17 @@
     </header>
 
     <section id="overview">
-      <p>I study how to extract reliable, relevant information from today's noisy superconducting quantum processors. My work spans <em>algorithm design</em>, <em>error-aware control</em>, and hardware <em>benchmarking</em>, with a foundational line in <em>non-stationary cavity quantum electrodynamics</em>.</p>
+      <p>I explore ways to pull trustworthy insights from noisy superconducting processors. My research ranges from <em>algorithm design</em> and <em>error-aware control</em> to hardware <em>benchmarking</em>, all rooted in <em>non-stationary cavity quantum electrodynamics</em>.</p>
     </section>
 
 
     <section id="algorithms">
       <h2>Quantum algorithms</h2>
-      <p>I develop and implement quantum algorithms to measure quantities of interest, stay within the coherence budget of noisy hardware. Highlights include Krylov-subspace diagonalisation of ~50-site spin lattices, the first experimental extraction of conformal-field-theory central charge on a universal processor, and early demonstrations that qubit-level matched filtering can recover astrophysical signals at classical signal-to-noise ratios. All of these share a guiding principle: pair modest quantum circuits with classical post-processing to reach classically intractable regimes sooner.</p>
+      <p>I design and run algorithms that stay within the coherence budget of today&rsquo;s hardware yet extract key observables. Highlights include diagonalising 50-site spin lattices with Krylov subspaces, measuring central charge on a universal processor, and showing that qubit-level matched filtering can recover astrophysical signals at classical signal-to-noise ratios. The common theme is simple quantum circuits paired with classical post-processing to reach classically intractable regimes sooner.</p>
 
       <div class="card" id="kqd">
         <h4>Krylov Quantum Diagonalization — 2024</h4>
-        <p>Diagonalizing large many-body Hamiltonians via shallow Trotter circuits and classical post-processing.</p>
+        <p>Diagonalising large many-body Hamiltonians with shallow Trotter circuits plus classical post-processing.</p>
         <p>
           <a class="button button-primary" href="https://arxiv.org/abs/2407.14431">Paper</a>
           <a class="button" href="https://quantum.cloud.ibm.com/docs/tutorials/krylov-quantum-diagonalization">Code / Tutorial</a>
@@ -41,7 +41,7 @@
 
       <div class="card" id="mpf">
         <h4>Tensor-network-enhanced MPF — 2024</h4>
-        <p>Compressing time-evolution circuits using multiproduct formulas assisted by tensor networks.</p>
+        <p>Compressing time-evolution circuits with multiproduct formulas guided by tensor networks.</p>
         <p>
           <a class="button button-primary" href="https://arxiv.org/abs/2407.17405">Paper</a>
           <a class="button" href="https://github.com/Qiskit/qiskit-addon-mpf">Code / Package</a>
@@ -51,11 +51,11 @@
 
     <section id="mitigation">
       <h2>Error suppression and mitigation</h2>
-      <p>Reliable algorithms require hardware-aware error suppression and mitigation. I build tools for: autonomous calibration of control pulses based on deep‑reinforcement‑learning and black-box optimization techniques; compiler techniques to reduce crosstalk via dynamical decoupling sequences; qubit selection protocols based on efficient sparse-noise tomography to execute the algorithm on the best performing qubits. These ideas extend into algorithmic space: I've recently started to explore tensor-network-assisted algorithm implementation, like multiproduct formulas, to improve performance without sacrificing circuit depth. Across all projects the aim is the same: suppress dominant errors <em>in situ</em> so mitigation overhead stays manageable.</p>
+      <p>To make algorithms reliable, I develop hardware-aware approaches that suppress and mitigate errors. This includes autonomous pulse calibration using deep reinforcement learning and black-box optimization, compiler methods that cut crosstalk with dynamical decoupling, and qubit-selection schemes built on sparse noise tomography. Recently I&rsquo;ve pushed these ideas into the algorithms themselves, using tensor-network techniques like multiproduct formulas to boost performance without deeper circuits. The goal across the board is to reduce dominant errors <em>in situ</em> so mitigation overhead stays manageable.</p>
 
       <div class="card" id="pec">
         <h4>Probabilistic Error Cancellation &amp; Amplification</h4>
-        <p>Toolkit for modeling device noise and reconstructing unbiased expectation values using quasi-probability techniques.</p>
+        <p>Toolkit for modeling device noise and recovering unbiased expectation values via quasi-probabilities.</p>
         <p>
           <a class="button" href="https://docs.quantum.ibm.com/guides/error-mitigation-and-suppression-techniques">Code / Docs</a>
           <a class="button" href="https://quantum.cloud.ibm.com/docs/en/tutorials/probabilistic-error-amplification">Code / Tutorial</a>
@@ -64,7 +64,7 @@
 
       <div class="card" id="qubits">
         <h4>Noise-Aware Qubit Selection — 2025</h4>
-        <p>Choosing the best qubits using sparse noise tomography or aggregated error metrics.</p>
+        <p>Choosing the best qubits via sparse noise tomography or aggregated error metrics.</p>
         <p>
           <a class="button button-primary" href="https://patents.google.com/patent/US20250165836A1">Patent</a>
           <a class="button" href="https://quantum.cloud.ibm.com/docs/en/tutorials/real-time-benchmarking-for-qubit-selection#background">Tutorial</a>
@@ -73,7 +73,7 @@
 
       <div class="card" id="cac">
         <h4>Context-Aware Compiling — 2024</h4>
-        <p>Mitigating correlated noise at compile time via targeted dynamical decoupling.</p>
+        <p>Mitigating correlated noise at compile time with targeted dynamical decoupling.</p>
         <p>
           <a class="button button-primary" href="https://arxiv.org/abs/2403.06852">Paper</a>
           <a class="button" href="https://docs.quantum.ibm.com/api/qiskit/dev/qiskit.transpiler.passes.ContextAwareDynamicalDecoupling">Code / API</a>
@@ -92,11 +92,11 @@
 
     <section id="qed">
       <h2>Non-stationary cavity QED</h2>
-      <p>At the heart of many superconducting devices is a tunable qubit-cavity coupling. My doctoral work focused on non-adiabatic effects, the dynamical Lamb and Casimir effects, arising during fast qubit driving. Modeling of superconducting circuits shows that these effects can be used to generate entanglement and perform ultra-fast quantum gates.</p>
+      <p>Many superconducting devices rely on tunable qubit&ndash;cavity coupling. In my doctoral work I studied fast driving regimes where non-adiabatic phenomena&mdash;the dynamical Lamb and Casimir effects&mdash;emerge. Circuit models show these effects can generate entanglement and enable ultra-fast gates.</p>
 
       <div class="card" id="qed-thesis">
         <h4>Dynamical Lamb effect</h4>
-        <p>Student research on entanglement generation via the dynamical Lamb effect.</p>
+        <p>Research exploring entanglement generation via the dynamical Lamb effect.</p>
         <p>
           <a class="button button-primary" href="https://academicworks.cuny.edu/gc_etds/3699/">Thesis</a>
           <a class="button" href="https://github.com/miamico/dynamical-Lamb-effect">Code</a>
@@ -128,7 +128,7 @@
         <li data-tags="algorithms"><strong>2019</strong> – M. Amico <em>et al.</em>, <a href="https://doi.org/10.1103/PhysRevA.100.012305">Experimental study of Shor's factoring algorithm using the IBM Q Experience</a>, <em>Phys. Rev. A</em> <strong>100</strong>, 012305. <span class="tag">Algorithms</span></li>
         <li data-tags="qed"><strong>2019</strong> – M. Amico <em>et al.</em>, <a href="https://doi.org/10.1103/PhysRevA.100.013841">Dynamical Lamb effect in a superconducting circuit</a>, <em>Phys. Rev. A</em> <strong>100</strong>, 013841. <span class="tag">QED</span></li>
       </ul>
-      <p>For citation metrics and newly added preprints, see my <a href="https://scholar.google.ca/citations?user=Zalars4AAAAJ">Google Scholar profile</a>.</p>
+      <p>For citation metrics and new preprints, see my <a href="https://scholar.google.ca/citations?user=Zalars4AAAAJ">Google Scholar profile</a>.</p>
     </section>
 
     <a href="#top" class="back-to-top">Back to top</a>
