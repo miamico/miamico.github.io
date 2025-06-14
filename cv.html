@@ -1,68 +1,143 @@
 <!doctype html>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>CV - Mirko Amico</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-      <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-      <div class="container">
-        <header>
-          <h1>Curriculum Vitae</h1>
-          <nav>
-            <a href="index.html">Home</a> · <a href="research.html">Research</a> ·
-            <a href="publications.html">Publications</a> · <a href="cv.html">CV</a> ·
-            <a href="projects.html">Projects</a> · <a href="contact.html">Contact</a>
-          </nav>
-          <hr>
-        </header>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CV – Mirko Amico</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Skeleton 2.0.4 via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* --------------------------------------------------------- */
+    /* Simple vertical timeline                                 */
+    /* --------------------------------------------------------- */
+    .timeline {
+      position: relative;
+      margin: 3rem 0;
+      padding-left: 2.5rem; /* room for line */
+    }
+    .timeline:before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #E1E1E1; /* Skeleton grey */
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #33C3F0; /* Skeleton primary */
+    }
+    .period {
+      display: inline-block;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .affiliation {
+      font-style: italic;
+      color: #555;
+    }
+    .project-list {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .project-list li {
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+    .thumb {
+      height: 24px;
+      width: 24px;
+      border-radius: 4px;
+      object-fit: cover;
+      margin-right: 0.4rem;
+      vertical-align: text-bottom;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Curriculum Vitae</h1>
+      <nav>
+        <a href="index.html">Home</a> ·
+        <a href="research.html">Research</a> ·
+        <a href="publications.html">Publications</a> ·
+        <a href="cv.html">CV</a> ·
+        <a href="projects.html">Projects</a> ·
+        <a href="contact.html">Contact</a>
+      </nav>
+      <hr>
+    </header>
 
+    <!-- ============================ Timeline ============================ -->
+    <section class="timeline">
 
-    <!-- ---------- Experience ---------------------------------------------- -->
-    <h2>Experience</h2>
+      <!-- --------------- Technical Lead --------------------------------- -->
+      <div class="timeline-item">
+        <span class="period">Sep&nbsp;2023 – Present</span>
+        <h3>Technical Lead <span class="affiliation">@ IBM Quantum</span></h3>
+        <ul class="project-list">
+          <li><img class="thumb" src="assets/images/kqd-thumb.jpg" alt="KQD thumbnail">Krylov Quantum Diagonalization — <a href="https://arxiv.org/abs/2407.14431">paper</a> · <a href="https://quantum.cloud.ibm.com/docs/tutorials/krylov-quantum-diagonalization">code</a></li>
+          <li><img class="thumb" src="assets/images/mpf-thumb.jpg" alt="MPF thumbnail">Tensor‑Network‑Enhanced MPF — <a href="https://arxiv.org/abs/2407.17405">paper</a></li>
+          <li><img class="thumb" src="assets/images/cac-thumb.jpg" alt="CAC thumbnail">Context‑Aware Compiling — <a href="https://arxiv.org/abs/2403.06852">paper</a></li>
+        </ul>
+      </div>
 
-    <p class="dates">Sep 2023 - present</p>
-    <strong>Technical Lead</strong>, IBM Quantum  
-    <ul>
-      <li>Direct Quantum Algorithm Engineering initiatives and client-driven demonstrations.</li>
-      <li>Product owner for IBM Quantum Tutorials (strategy, roadmap, author guidance).</li>
-      <li>Support large-scale quantum-advantage experiments.</li>
-    </ul>
+      <!-- --------------- Research Scientist ----------------------------- -->
+      <div class="timeline-item">
+        <span class="period">Jan&nbsp;2022 – Sep&nbsp;2023</span>
+        <h3>Research Scientist <span class="affiliation">@ IBM Quantum</span></h3>
+        <ul class="project-list">
+          <li><img class="thumb" src="assets/images/readout-thumb.jpg" alt="Readout mitigation">Readout‑Error Mitigation Toolkit — lead developer</li>
+          <li><img class="thumb" src="assets/images/gse-thumb.jpg" alt="GSE">Generalised Surprisal Extrapolation (GSE) for noise bias removal</li>
+        </ul>
+      </div>
 
-    <p class="dates">Jan 2022 - Sep 2023</p>
-    <strong>Research Scientist</strong>, IBM Quantum  
-    <ul>
-      <li>Led high-impact demonstrations of quantum applications on real devices.</li>
-      <li>Developed state-of-the-art error-suppression &amp; mitigation (probabilistic error cancellation, readout twirling, GSE).</li>
-      <li>Benchmarked mitigation techniques to unlock higher-scale workloads.</li>
-    </ul>
+      <!-- --------------- Senior Quantum Control Engineer ---------------- -->
+      <div class="timeline-item">
+        <span class="period">Jan&nbsp;2020 – Jan&nbsp;2022</span>
+        <h3>Senior Quantum Control Engineer <span class="affiliation">@ Q‑CTRL</span></h3>
+        <ul class="project-list">
+          <li><img class="thumb" src="assets/images/rl-pulses-thumb.jpg" alt="RL pulses">Deep‑RL pulse optimisation (×2 fidelity gain)</li>
+          <li><img class="thumb" src="assets/images/opencq-thumb.jpg" alt="OpenCQ">Multi‑qubit pulse‑level simulator</li>
+        </ul>
+      </div>
 
-    <p class="dates">Jan 2020 – Jan 2022</p>
-    <strong>Senior Quantum Control Engineer</strong>, Q-CTRL  
-    <ul>
-      <li>Created a Python package for single- and two-qubit gate optimisation.</li>
-      <li>Built realistic pulse-level simulations for multi-qubit devices.</li>
-      <li>Optimised measurement and gates on superconducting circuits (x3 speed-up, x2 fidelity gain via RL-based pulses).</li>
-    </ul>
+      <!-- --------------- Doctoral Research ------------------------------ -->
+      <div class="timeline-item">
+        <span class="period">2016 – 2020</span>
+        <h3>Ph.D. Candidate <span class="affiliation">@ City University of New York</span></h3>
+        <ul class="project-list">
+          <li><img class="thumb" src="assets/images/dle-thumb.jpg" alt="DLE">Dynamical Lamb Effect entanglement generation — <a href="https://doi.org/10.1103/PhysRevA.100.013841">paper</a></li>
+        </ul>
+      </div>
 
-    <!-- ---------- Education ----------------------------------------------- -->
-    <h2>Education</h2>
-    <table style="width:100%">
-      <tr><td>Ph.D. Physics, City University of New York</td><td class="dates">2020</td></tr>
-      <tr><td>M.Sc. Physics, University of Milan</td><td class="dates">2016</td></tr>
-      <tr><td>B.Sc. Engineering Physics, Polytechnic University of Milan</td><td class="dates">2013</td></tr>
-    </table>
+      <!-- --------------- Education (MSc & BSc) -------------------------- -->
+      <div class="timeline-item">
+        <span class="period">2014 – 2016</span>
+        <h3>M.Sc. Physics <span class="affiliation">@ University of Milan</span></h3>
+      </div>
 
-    <!-- ---------- Awards --------------------------------------------------- -->
-    <h2>Awards</h2>
-    <ul>
-      <li><strong>Dissertation Year Fellowship</strong>, CUNY (2019)</li>
-      <li>3rd place <strong>IBM “Teach Me Quantum” Award</strong> (2018)</li>
-      <li>Finalist <strong>IBM “Teach Me QISKit” Award</strong> (2018)</li>
-    </ul>
+      <div class="timeline-item">
+        <span class="period">2010 – 2013</span>
+        <h3>B.Sc. Engineering Physics <span class="affiliation">@ Politecnico di Milano</span></h3>
+      </div>
 
+    </section>
 
     <footer><hr><small>Last updated 2025 • © Mirko Amico</small></footer>
   </div>
