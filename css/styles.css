@@ -458,6 +458,7 @@ html.dark a { color:#80d0ff; }
 html.dark a:hover { color:#b3e5ff; }
 html.dark hr { border-top-color:#444; }
 html.dark .card { border-color:#444; background:#1b1b1b; box-shadow:0 2px 4px rgba(0,0,0,0.6); }
+html.dark .tag { color:#000; }
 html.dark input,
 html.dark textarea,
 html.dark select {
