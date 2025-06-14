@@ -30,10 +30,11 @@
       <!-- -------------------------------------------------------------- -->
       <h2>Krylov Quantum Diagonalization</h2>
       <p>
-        Implements a Krylov-subspace algorithm to extract low-energy spectra of
-        many-body Hamiltonians on IBM’s 127-qubit heavy-hex processors.  A shallow
-        Trotter circuit prepares a sample sub-space; classical post-processing
-        then yields eigenvalues that rival exact diagonalisation for 56-site
+        Diagonalizing the Hamiltonian of large, strongly correlated quantum systems can be challeging for classical computers.
+        In this work, we implemented a Krylov subspace quantum algorithm to extract low-energy spectra of
+        many-body Hamiltonians on a quantum processor. Shallow
+        Trotter circuits prepare the Krylov subspace and the Hadamrd test returns overlap between subspace vectors. Classical post-processing
+        then yields eigenvalues that rival exact diagonalisation for ~50-site
         lattices.  The technique bridges the gap between variational methods and
         fault-tolerant phase-estimation.
       </p>
@@ -45,11 +46,10 @@
       <!-- -------------------------------------------------------------- -->
       <h2>Tensor-Network-Enhanced Dynamic Multiproduct Formulas</h2>
       <p>
-        Combines tensor-network compression with high-order multiproduct formulas
-        (MPF) to simulate quantum dynamics more accurately than either approach
-        alone.  Expectation values are sampled on hardware; tensor networks
-        compute optimal MPF coefficients offline, reducing algorithmic error an
-        order of magnitude.
+        Implementing time-evolution operators on quantum processors can give deep circuits which are susceptible to errors.
+        The dynamic multiproduct formulas (MPF) method combines tensor-networks with multiproduct formulas to compress time-evolution circuits and 
+        simulate quantum dynamics with shallower circuits for the same algorithmic error budget.  Expectation values are sampled on hardware while tensor networks
+        compute optimal MPF coefficients offline, complementing classical and quantum resources.
       </p>
       <p class="btn-row">
         <a class="button button-primary" href="https://arxiv.org/abs/2407.17405">Paper</a>
@@ -57,58 +57,57 @@
       </p>
 
       <!-- -------------------------------------------------------------- -->
-      <h2>Probabilistic Error Cancellation &amp; Amplification</h2>
+      <h2>Probabilistic Error Cancellation and Amplification</h2>
       <p>
-        Qiskit’s PEC/PEA toolkit models device noise via local process tomography
-        and reconstructs an unbiased estimator of the ideal circuit.  The
-        package streamlines calibration, quasi-probability computation, and
-        shot-frugal resampling, allowing users to swap between zero-noise
+        Qiskit's PEC/PEA toolkit models device noise via sparse Pauli-Lindblad tomography
+        and reconstructs an unbiased estimator of the ideal expectation value.  The
+        package streamlines calibration, quasi-probability computation, and resampling, allowing users to seemlessly switch between zero-noise
         extrapolation and PEC without rewriting workloads.
       </p>
       <p class="btn-row">
-        <a class="button button-primary" href="https://doi.org/10.1103/PRXQuantum.4.010345">Paper</a>
         <a class="button" href="https://docs.quantum.ibm.com/guides/error-mitigation-and-suppression-techniques">Code / Docs</a>
+        <a class="button" href="https://quantum.cloud.ibm.com/docs/en/tutorials/probabilistic-error-amplification">Code / Tutorial</a>
+
       </p>
 
       <!-- -------------------------------------------------------------- -->
       <h2>Noise-Aware Qubit Selection</h2>
       <p>
-        A runtime-adaptive heuristic that chooses qubits with the lowest
-        aggregate error rates (T<sub>1</sub>, T<sub>2</sub>, readout, crosstalk)
-        just before job submission.  Integrated into the IBM Quantum Learning
-        path, it demonstrates up to 2× fidelity gain on depth-40 random circuits
-        without extra calibration overhead.
+        Qubit quality varies drastically across a quantum processor. To get the best algorithmic performance it is important to choose the best qubits available.
+        The problem of selecting physical qubits for a given circuit is generally refer to as the qubit layout problem. 
+        Qubit characterization routines can provide guidance on the best qubits to use for a given circuit but may require additional resources.
+        One possibility is to use the efficient <a href="https://patents.google.com/patent/US20250165836A1">sparse-noise tomography approach</a> to characterize the Pauil noise channel of the device and use the information for layout selection.
+        Alternatively, one can aggregate error rates information (T<sub>1</sub>, T<sub>2</sub>, readout, RB<sub>1q</sub>, RB<sub>2q</sub>) to achieve the same goal.
       </p>
       <p class="btn-row">
-        <a class="button button-primary" href="https://ieeexplore.ieee.org/document/10543212">Paper</a>
-        <a class="button" href="https://learning.quantum.ibm.com/course/utility-scale-quantum-computing/lesson-14-utility-iii">Tutorial</a>
+        <a class="button" href="https://quantum.cloud.ibm.com/docs/en/tutorials/real-time-benchmarking-for-qubit-selection#background">Tutorial</a>
       </p>
 
       <!-- -------------------------------------------------------------- -->
       <h2>Context-Aware Compiling</h2>
       <p>
-        A transpiler pass that analyses the gate-by-gate “context” of each qubit
-        layer and inserts targeted dynamical-decoupling pulses only where they
-        mitigate correlated noise.  Demonstrated an 18 % layer-fidelity boost on
-        10-qubit circuits and released as <code>ContextAwareDynamicalDecoupling</code> in Qiskit Terra 0.46.
+        Cross-talk between qubits is a major source of error on quantum processors where qubits have always-on couplings. 
+        The static nature of the error source makes it possible to determine how to mitigate correlated noise at compile time.
+        This is done by inserting dynamical decoupling pulses, qubit drives which amount to the identity operation, which have the effect of canceling out unwanted evolution due to the error source.
+        Qiskit allows to easily implement transpiler passes that analyse the gate-by-gate “context” in a circuit and inserts targeted dynamical-decoupling pulses in the right idle gaps of a quantum circuit.
       </p>
       <p class="btn-row">
         <a class="button button-primary" href="https://arxiv.org/abs/2403.06852">Paper</a>
-        <a class="button" href="https://docs.quantum.ibm.com/api/qiskit/transpiler/passes/ContextAwareDynamicalDecoupling">Code / API</a>
+        <a class="button" href="https://docs.quantum.ibm.com/api/qiskit/dev/qiskit.transpiler.passes.ContextAwareDynamicalDecoupling">Code / API</a>
       </p>
 
       <!-- -------------------------------------------------------------- -->
       <h2>Error-Robust Gate-Set Design (Deep RL)</h2>
       <p>
-        Uses deep reinforcement learning to discover microwave pulse shapes that
-        halve two-qubit error rates while shortening gate time.  The method
-        autonomously adapts to slow drift and requires no analytic device
-        model, paving the way for AI-driven calibration of large qubit
-        registers.
+        Calibration of qubit drives generally relies on information about the physics of the system. 
+        For large qubit registers, physics-based models fail to capture the full complexity of the system. This translates into sub-optimal performance of the calibration routine.
+        In these situations, machine-learning methods like deep reinforcement learning and black-box optimization techniques can be used to discover pulse shapes to
+        improve gate fidelites. The methods autonomously adapts to slow drift and requires no analytic device model.
+        These have been integrated as part of Q-CTRL's <a href="https://docs.q-ctrl.com/fire-opal">Fire Opal</a> software package.
       </p>
       <p class="btn-row">
         <a class="button button-primary" href="https://doi.org/10.1103/PRXQuantum.2.040324">Paper</a>
-        <a class="button" href="https://github.com/q-ctrl/fire-opal">Code (Fire Opal)</a>
+        <a class="button" href="https://docs.q-ctrl.com/fire-opal">Docs (Fire Opal)</a>
       </p>
     </section>
 
