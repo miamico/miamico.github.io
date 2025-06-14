@@ -472,3 +472,15 @@ html.dark code {
 html.dark pre > code {
   background:#222;
 }
+
+/* Homepage extras */
+.tagline {
+  font-size:1.2rem;
+  font-weight:600;
+  margin-top:0.5rem;
+}
+
+.cta {
+  font-size:1.1rem;
+  padding:0.6rem 2rem;
+}
