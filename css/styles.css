@@ -447,6 +447,10 @@ a:hover {
 .card-grid .card {
   margin-bottom: 0;
   max-width: 200px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .tag {
   display: inline-block;
