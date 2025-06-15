@@ -416,12 +416,6 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
-/* --- Custom tweaks --- */
-:root {
-  --card-bg: #fff;
-  --card-border: #B0B0B0;
-}
-  
 
 .container {
   max-width: 70ch;
