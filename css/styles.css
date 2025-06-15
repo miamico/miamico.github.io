@@ -421,13 +421,8 @@ there.
   --card-bg: #fff;
   --card-border: #B0B0B0;
 }
+  
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --card-bg: #1b1b1b;
-    --card-border: #444;
-  }
-}
 .container {
   max-width: 70ch;
 }
