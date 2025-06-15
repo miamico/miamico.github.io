@@ -127,6 +127,11 @@ body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
+:root {
+  --card-bg: #fff;
+  --card-border: #ccc;
+}
+
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -425,8 +430,10 @@ a:hover {
   text-decoration: underline;
 }
 .card {
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--card-border, #ccc);
+  background: var(--card-bg, #fff);
   padding: 0.8rem;
   margin-bottom: 2.5rem;
   border-radius: 6px;
@@ -459,6 +466,12 @@ a:hover {
 
 .card-grid .card {
   margin-bottom: 0;
+}
+
+.card footer {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
 }
 .tag {
   display: inline-block;
