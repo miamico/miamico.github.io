@@ -461,11 +461,12 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  justify-items: center;
+  justify-items: stretch;
   margin-bottom: 3rem;
 }
 
 .card-grid .card {
+  width: 100%;
   margin-bottom: 3rem;
 }
 
@@ -615,31 +616,34 @@ html.dark pre > code {
 }
 .timeline-item:last-child { margin-bottom: 0; }
 .role {
-  font-size: 1.25rem;
+  font-size: 2.1rem;
   font-weight: 600;
-  margin: 0 0 0.15rem 0;
-  line-height: 1.3;
+  margin: 0 0 0.2rem 0;
+  line-height: 1.25;
 }
 .subhead {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.55rem;
 }
 .affiliation {
   font-style: italic;
-  color: #555;
-  font-size: 0.95rem;
+  color: #2a2a2a;
+  font-size: 1.45rem;
+  font-weight: 500;
 }
 .period {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   white-space: nowrap;
   margin-left: 1rem;
+  color: #3a3a3a;
 }
 .summary {
   margin: 0.6rem 0 0.6rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  font-size: 1.55rem;
 }
 .project-list {
   list-style-type: disc;
@@ -663,4 +667,372 @@ html.dark pre > code {
 .btn:hover {
   background: #33C3F0;
   color: #fff;
+}
+
+/* ==============================================
+   2026 Minimal Professional Restyle (B/W)
+   Scope: style-only, no content/functional changes
+   ============================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #5b5b5b;
+  --line: #d9d9d9;
+  --line-strong: #111111;
+  --surface: #ffffff;
+  --surface-soft: #f7f7f7;
+  --accent: #111111;
+  --card-bg: var(--surface);
+  --card-border: var(--line);
+}
+
+html {
+  font-size: 62.5%;
+  background: var(--bg);
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.72;
+  letter-spacing: 0.005em;
+}
+
+.container {
+  max-width: 76rem;
+  padding-top: 2.4rem;
+  padding-bottom: 3.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #0d0d0d;
+}
+
+h1 { font-size: clamp(3.2rem, 4vw, 4.8rem); line-height: 1.1; margin-bottom: 1rem; }
+h2 { font-size: clamp(2.4rem, 3vw, 3.3rem); line-height: 1.2; margin-bottom: 1.2rem; }
+h3 { font-size: clamp(2rem, 2.2vw, 2.5rem); line-height: 1.25; margin-bottom: 0.8rem; }
+
+p, li {
+  color: #1f1f1f;
+  font-size: 1.6rem;
+}
+
+p { margin-bottom: 1.8rem; }
+
+header p {
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+nav {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.45rem;
+}
+
+nav a {
+  color: #131313;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.1rem;
+  transition: border-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  border-bottom-color: #131313;
+  text-decoration: none;
+}
+
+a {
+  color: #111;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+a:hover { color: #000; }
+
+hr {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.btn {
+  font-family: "Inter", sans-serif;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-size: 1.25rem;
+  height: auto;
+  line-height: 1.2;
+  padding: 0.9rem 1.4rem;
+  border-radius: 0;
+  border: 1px solid #151515;
+  color: #111;
+  background: #fff;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover {
+  background: #000;
+  border-color: #000;
+}
+
+.card {
+  border: 1px solid var(--line);
+  box-shadow: none;
+  border-radius: 0;
+  padding: 1.6rem;
+  background: #fff;
+}
+
+.card:hover,
+.card:focus-visible {
+  box-shadow: none;
+  border-color: #111;
+}
+
+.card:focus-visible,
+.card:focus-within {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+.tag,
+.chip,
+.pill {
+  background: #f2f2f2;
+  color: #111;
+  border: 1px solid #d0d0d0;
+}
+
+.pill.active {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.avatar {
+  border-radius: 0;
+  border: 1px solid var(--line);
+}
+
+.intro-line {
+  font-size: 1.75rem;
+  line-height: 1.65;
+  color: #171717;
+}
+
+.timeline {
+  padding-left: 2.2rem;
+}
+
+.timeline:before {
+  width: 1px;
+  background: #c8c8c8;
+}
+
+.timeline-item {
+  margin-bottom: 2.6rem;
+}
+
+.affiliation,
+.period,
+.summary {
+  color: #444;
+}
+
+.theme-toggle {
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.6rem;
+}
+
+.theme-toggle:hover {
+  border-color: #111;
+}
+
+footer small {
+  color: #666;
+}
+
+/* Dark mode: keep monochrome, high-contrast, minimal */
+html.dark {
+  --bg: #0d0d0d;
+  --text: #efefef;
+  --muted: #b9b9b9;
+  --line: #2b2b2b;
+  --line-strong: #efefef;
+  --surface: #111111;
+  --surface-soft: #1a1a1a;
+  --accent: #efefef;
+  --card-bg: #111111;
+  --card-border: #2c2c2c;
+  background: var(--bg);
+  color: var(--text);
+}
+
+html.dark body,
+html.dark p,
+html.dark li,
+html.dark .summary,
+html.dark .affiliation,
+html.dark .period,
+html.dark header p,
+html.dark footer small {
+  color: var(--text);
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark .role,
+html.dark .intro-line,
+html.dark .subhead,
+html.dark .timeline-item h3,
+html.dark .timeline-item h4,
+html.dark .affiliation,
+html.dark .period {
+  color: #f2f2f2;
+}
+
+html.dark a,
+html.dark nav a {
+  color: #f1f1f1;
+}
+
+html.dark nav a:hover,
+html.dark nav a:focus-visible {
+  border-bottom-color: #f1f1f1;
+}
+
+html.dark hr,
+html.dark .timeline:before,
+html.dark .avatar,
+html.dark .card,
+html.dark .theme-toggle,
+html.dark .pill,
+html.dark .chip,
+html.dark .tag {
+  border-color: #5a5a5a;
+}
+
+html.dark .card {
+  background: #0b0b0b;
+  border-color: #6a6a6a;
+}
+
+html.dark .card p,
+html.dark .card li,
+html.dark .card h1,
+html.dark .card h2,
+html.dark .card h3,
+html.dark .card h4,
+html.dark .card h5,
+html.dark .card h6,
+html.dark .card a,
+html.dark .card .tag,
+html.dark .card .chip,
+html.dark .card .pill {
+  color: #f2f2f2;
+}
+
+html.dark .card .tag,
+html.dark .card .chip,
+html.dark .card .pill {
+  background: #111;
+  border-color: #666;
+  color: #f2f2f2;
+}
+
+html.dark .pill,
+html.dark .card .pill {
+  color: #f2f2f2;
+}
+
+html.dark .chip,
+html.dark .tag,
+html.dark .card .chip,
+html.dark .card .tag {
+  color: #111;
+}
+
+html.dark .pill:not(.active),
+html.dark .card .pill:not(.active) {
+  background: #111;
+  color: #f2f2f2;
+  border-color: #666;
+}
+
+html.dark .pill.active,
+html.dark .card .pill.active {
+  background: #f2f2f2;
+  color: #111;
+  border-color: #f2f2f2;
+}
+
+html.dark .button,
+html.dark button,
+html.dark .btn,
+html.dark input[type="submit"],
+html.dark input[type="reset"],
+html.dark input[type="button"] {
+  background: #111;
+  color: #f5f5f5;
+  border-color: #666;
+}
+
+html.dark .button:hover,
+html.dark button:hover,
+html.dark .btn:hover,
+html.dark input[type="submit"]:hover,
+html.dark input[type="reset"]:hover,
+html.dark input[type="button"]:hover {
+  background: #f0f0f0;
+  color: #111;
+  border-color: #f0f0f0;
+}
+
+@media (max-width: 680px) {
+  .container { width: 92%; }
+  nav { line-height: 1.9; }
+  .intro-line { font-size: 1.6rem; }
 }
