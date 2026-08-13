@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>CV - Mirko Amico</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <!-- Skeleton 2.0.4 via CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -14,10 +14,10 @@
     <header>
       <h1>Curriculum Vitae</h1>
       <nav>
-        <a href="/index.html">Home</a> ·
-        <a href="/research/">Research</a> ·
-        <a href="/cv.html">CV</a> ·
-        <a href="/contact.html">Contact</a>
+        <a href="index.html">Home</a> ·
+        <a href="research/">Research</a> ·
+        <a href="cv.html">CV</a> ·
+        <a href="contact.html">Contact</a>
         <button class="theme-toggle u-pull-right" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
       </nav>
       <hr>
@@ -28,11 +28,23 @@
 
       <!-- ---------- Experience ---------------------------------------- -->
       <div class="timeline-item">
-        <h3 class="role">Technical Lead</h3>
-        <div class="subhead"><span class="affiliation">IBM Quantum</span><span class="period">Sep 2023 - Present</span></div>
-        <p class="summary">Drive the Quantum Algorithm Engineering roadmap and provide technical guidance to the team delivering client demonstrations towards quantum advantage. Product owner of <a href='https://quantum.cloud.ibm.com/docs/en/tutorials'>IBM Quantum Tutorials</a>.</p>
+        <h3 class="role">Calibration and Control Lead</h3>
+        <div class="subhead"><span class="affiliation"><a href="https://extropic.ai/">Extropic</a></span><span class="period">2026 - Present</span></div>
+        <p class="summary">Lead calibration and control work for thermodynamic computing hardware. Develop hardware-aware methods that connect probabilistic devices, stochastic algorithms, and compilation.</p>
         <ul class="project-list">
-          <li><a href="research/#kqd">Demonstration of Projected Quantum Kernels</a> - demonstration of pqk algorithm for classification <a class="btn" href="https://arxiv.org/abs/2507.22710">paper</a> <a class="btn" href="https://quantum.cloud.ibm.com/docs/en/tutorials/projected-quantum-kernels">tutorial</a></li>
+          <li><a href="research/#thermalizers">Thermalizers</a> - compilation of parametrized stochastic circuits to hardware-native energy-based models <a class="btn" href="https://arxiv.org/abs/2608.01615">paper</a></li>
+          <li><a href="research/#torx">Torx</a> - a JAX framework for constructing, executing, and differentiating parametrized stochastic circuits <a class="btn" href="https://arxiv.org/abs/2608.01612">paper</a> <a class="btn" href="https://docs.torx.ai/">docs</a></li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3 class="role">Technical Lead</h3>
+        <div class="subhead"><span class="affiliation">IBM Quantum</span><span class="period">Sep 2023 - 2026</span></div>
+        <p class="summary">Drove the Quantum Algorithm Engineering roadmap and provided technical guidance for large-scale demonstrations on quantum hardware. Product owner of <a href="https://quantum.cloud.ibm.com/docs/en/tutorials">IBM Quantum Tutorials</a>.</p>
+        <ul class="project-list">
+          <li><a href="research/#quepp">Quantum Enhanced Pauli Propagation</a> - quantum-assisted classical simulation of noisy circuits <a class="btn" href="https://arxiv.org/abs/2603.14485">paper</a></li>
+          <li><a href="research/#ffsim">ffsim</a> - fast classical simulation of fermionic quantum circuits <a class="btn" href="https://arxiv.org/abs/2605.03123">paper</a></li>
+          <li><a href="research/#pqk">Projected Quantum Kernels</a> - quantum-kernel classification of CAR T-cell cytotoxicity <a class="btn" href="https://arxiv.org/abs/2507.22710">paper</a> <a class="btn" href="https://quantum.cloud.ibm.com/docs/en/tutorials/projected-quantum-kernels">tutorial</a></li>
           <li><a href="research/#kqd">Sample-based Krylov Quantum Diagonalization</a> - diagonalizing lattice Hamiltonians with quantum samples <a class="btn" href="https://arxiv.org/abs/2501.09702v3">paper</a> <a class="btn" href="https://quantum.cloud.ibm.com/docs/en/tutorials/sample-based-krylov-quantum-diagonalization">tutorial</a></li>
           <li><a href="research/#kqd">Krylov Quantum Diagonalization</a> - low-energy spectra of strongly correlated quantum systems <a class="btn" href="https://doi.org/10.1038/s41467-025-59716-z">paper</a> <a class="btn" href="https://quantum.cloud.ibm.com/docs/tutorials/krylov-quantum-diagonalization">tutorial</a></li>
           <li><a href="research/#mpf">Tensor-Network-enhanced MPF</a> - compressed time-evolution of quantum systems <a class="btn" href="https://journals.aps.org/prxquantum/abstract/10.1103/8bzc-dlgt">paper</a> <a class="btn" href="https://quantum.cloud.ibm.com/docs/en/tutorials/multi-product-formula">tutorial</a></li>
@@ -47,7 +59,7 @@
           <li><a href="research/#cac">Context-Aware Compiling</a> - error suppression at the compiler level <a class="btn" href="https://arxiv.org/abs/2403.06852">paper</a> <a class="btn" href="https://docs.quantum.ibm.com/api/qiskit/dev/qiskit.transpiler.passes.ContextAwareDynamicalDecoupling">API</a></li>
           <li>Probabilistic Error Cancellation and Amplification package - efficient software implementation <a class="btn" href="https://docs.quantum.ibm.com/guides/error-mitigation-and-suppression-techniques">docs</a></li>
           <li>Sparse noise-tomography qubit mapper - hardware-aware qubit selection <a class="btn" href="https://patentguru.com/US20250165836A1">patent</a></li>
-          <li>Measuring central charge - algorithm demonstration <a class="btn" href="https://arxiv.org/abs/2408.06342">paper</a></li>
+          <li>Measuring central charge - algorithm demonstration <a class="btn" href="https://doi.org/10.1038/s41467-025-66775-9">paper</a></li>
           <li>Defining best practices for quantum benchmarks - effects of error mitigation on benchmarking <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/10313904">paper</a></li>
         </ul>
       </div>
@@ -95,8 +107,8 @@
 
     </section>
 
-    <footer><hr><small>© 2025 Mirko Amico</small></footer>
+    <footer><hr><small>© 2026 Mirko Amico</small></footer>
   </div>
-  <script src="/js/theme-toggle.js"></script>
+  <script src="js/theme-toggle.js"></script>
 </body>
 </html>

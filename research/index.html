@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Research - Mirko Amico</title>
+  <meta name="description" content="Research on thermodynamic computing, parametrized stochastic circuits, probabilistic hardware, quantum algorithms, and quantum control.">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -13,27 +14,67 @@
     <header>
       <h1>Research</h1>
       <nav>
-        <a href="/index.html">Home</a> ·
-        <a href="/research/">Research</a> ·
-        <a href="/cv.html">CV</a> ·
-        <a href="/contact.html">Contact</a>
+        <a href="../index.html">Home</a> ·
+        <a href="./">Research</a> ·
+        <a href="../cv.html">CV</a> ·
+        <a href="../contact.html">Contact</a>
         <button class="theme-toggle u-pull-right" onclick="toggleTheme()" aria-label="Toggle dark mode"></button>
       </nav>
       <hr>
     </header>
 
-    <!-- <section id="overview">
-    </section> -->
+    <section id="thermodynamic-computing">
+      <h2>Thermodynamic computing</h2>
+      <p>I study computation in which physical stochastic dynamics are part of the algorithm. The goal is to co-design probabilistic hardware, stochastic programs, and compilation methods so that useful distributions can be sampled with low energy and control overhead.</p>
+      <p>I work on calibration and control and on the interface between algorithms and thermodynamic hardware. Parametrized Stochastic Circuits provide a compositional representation of typed stochastic kernels. <em>Torx</em> implements this representation in JAX. <em>Thermalizers</em> compiles these kernels to hardware-native energy-based models and provides methods to control accumulated compilation error.</p>
+
+      <div class="card-grid">
+        <article class="card" id="thermalizers" tabindex="0">
+          <h4>Thermalizing stochastic programs</h4>
+          <p>Compiling general stochastic programs into thermodynamic kernels that can be sampled on probabilistic hardware.</p>
+          <footer>
+            <a class="button button-primary" href="https://arxiv.org/abs/2608.01615">Paper</a>
+            <a class="button" href="https://extropic.ai/writing/from-one-to-one-billion">Overview</a>
+          </footer>
+        </article>
+
+        <article class="card" id="torx" tabindex="0">
+          <h4>Parametrized Stochastic Circuits and Torx</h4>
+          <p>A gate-based intermediate representation and JAX framework for constructing, executing, and differentiating stochastic programs.</p>
+          <footer>
+            <a class="button button-primary" href="https://arxiv.org/abs/2608.01612">Paper</a>
+            <a class="button" href="https://docs.torx.ai/">Documentation</a>
+          </footer>
+        </article>
+      </div>
+    </section>
 
 
     <section id="algorithms">
-      <h2>Quantum algorithms</h2>
-      <p>I develop and implement quantum algorithms tailored to compute quantities of interest within the coherence budget of noisy hardware. 
+      <h2>Quantum algorithms and simulation</h2>
+      <p>My previous work developed and implemented quantum algorithms tailored to compute quantities of interest within the coherence budget of noisy hardware.
         Topics range from simulations of quantum many-body systems, to high-energy physics phenomena, quantum thermodynamics and quantum optics.
          Highlights include Krylov-subspace diagonalisation of spin lattices, the first experimental measurement of conformal-field-theory central charge on a universal processor, and early demonstrations that qubit-level matched filtering can recover astrophysical signals at classical signal-to-noise ratios. 
         </p>
 
       <div class="card-grid">
+
+        <article class="card" id="phase-estimation" tabindex="0">
+          <h4>Coherent phase estimation with uncontrolled unitaries</h4>
+          <p>Replacing controlled time evolution with uncontrolled evolution to reduce the two-qubit-gate cost of phase estimation.</p>
+          <footer>
+            <a class="button button-primary" href="https://arxiv.org/abs/2603.27858">Paper</a>
+          </footer>
+        </article>
+
+        <article class="card" id="ffsim" tabindex="0">
+          <h4>Fermionic circuit simulation</h4>
+          <p>Fast simulation of fermionic quantum circuits using particle-number and spin symmetries.</p>
+          <footer>
+            <a class="button button-primary" href="https://arxiv.org/abs/2605.03123">Paper</a>
+            <a class="button" href="https://github.com/qiskit-community/ffsim">Code</a>
+          </footer>
+        </article>
 
         <article class="card" id="kqd" tabindex="0">
           <h4>Krylov Quantum Diagonalization</h4>
@@ -62,11 +103,11 @@
           </footer>
         </article>
 
-        <article class="card" id="pqk" tabindex="0">
+        <article class="card" id="central-charge" tabindex="0">
           <h4>Measurement of Central Charge</h4>
           <p>Measuring the central charge of a quantum system on a quantum processor.</p>
           <footer>
-            <a class="button button-primary" href="https://arxiv.org/abs/2408.06342">Paper</a>
+            <a class="button button-primary" href="https://doi.org/10.1038/s41467-025-66775-9">Paper</a>
             <!-- <a class="button" href="">Tutorial</a> -->
           </footer>
         </article>
@@ -77,11 +118,19 @@
 
     <section id="mitigation">
       <h2>Error suppression and mitigation</h2>
-      <p>Reliable algorithmic results on noisy quantum processors require hardware-aware error suppression and mitigation. 
-        I build tools for: autonomous calibration of control pulses based on deep-reinforcement-learning and black-box optimization techniques; compiler techniques to reduce crosstalk via dynamical decoupling sequences; qubit selection protocols based on efficient sparse-noise tomography to execute the algorithm on the best performing qubits. 
-        These ideas extend into algorithmic space: I've recently started to explore tensor-network-assisted algorithm implementation, like multiproduct formulas, to improve performance without sacrificing circuit depth. Across all projects the aim is the same: suppress dominant errors <em>in situ</em> so mitigation overhead stays manageable.</p>
+      <p>Reliable algorithmic results on noisy quantum processors require hardware-aware error suppression and mitigation.
+        I developed tools for autonomous calibration of control pulses using deep reinforcement learning and black-box optimization, compiler techniques that reduce crosstalk using dynamical decoupling, and qubit-selection protocols based on sparse-noise tomography.
+        I also studied hybrid quantum-classical methods, including tensor-network-assisted multiproduct formulas and quantum-enhanced Pauli propagation. Across these projects, the aim was to suppress or correct dominant errors while keeping sampling overhead manageable.</p>
 
       <div class="card-grid">
+      <article class="card" id="quepp" tabindex="0">
+        <h4>Quantum Enhanced Pauli Propagation</h4>
+        <p>Using noisy quantum data to improve approximate classical Pauli-path simulation without explicit noise characterization.</p>
+        <footer>
+          <a class="button button-primary" href="https://arxiv.org/abs/2603.14485">Paper</a>
+        </footer>
+      </article>
+
       <article class="card" id="mpf" tabindex="0">
         <h4>Tensor-network-enhanced MPF</h4>
         <p>Compressing time-evolution circuits using multiproduct formulas assisted by tensor networks.</p>
@@ -154,18 +203,24 @@
       <h2>Selected publications and preprints</h2>
       <div id="tagFilters" class="u-full-width">
         <span class="pill active" data-tag="">All</span>
+        <span class="pill" data-tag="thermodynamic">Thermodynamic</span>
         <span class="pill" data-tag="mitigation">Mitigation</span>
         <span class="pill" data-tag="algorithms">Algorithms</span>
         <span class="pill" data-tag="qed">QED</span>
       </div>
       <ul id="pubList">
+        <li data-tags="thermodynamic"><strong>2026</strong> - <a href="https://arxiv.org/abs/2608.01615">Thermalizing Stochastic Programs</a>, (M. Amico <em>et al.</em>) arXiv:2608.01615. <span class="tag">Thermodynamic</span></li>
+        <li data-tags="thermodynamic"><strong>2026</strong> - <a href="https://arxiv.org/abs/2608.01612">A Framework for Stochastic Differentiable Programming</a>, (G. Verdon <em>et al.</em>) arXiv:2608.01612. <span class="tag">Thermodynamic</span></li>
+        <li data-tags="algorithms"><strong>2026</strong> - <a href="https://arxiv.org/abs/2605.03123">ffsim: Faster simulation of fermionic quantum circuits</a>, (K. J. Sung <em>et al.</em>) arXiv:2605.03123. <span class="tag">Algorithms</span></li>
+        <li data-tags="algorithms"><strong>2026</strong> - <a href="https://arxiv.org/abs/2603.27858">Exponentially cheaper coherent phase estimation via uncontrolled unitaries</a>, (M. Amico) arXiv:2603.27858. <span class="tag">Algorithms</span></li>
+        <li data-tags="mitigation algorithms"><strong>2026</strong> - <a href="https://arxiv.org/abs/2603.14485">Quantum Enhanced Pauli Propagation</a>, (S. Majumder <em>et al.</em>) arXiv:2603.14485. <span class="tag">Mitigation</span> <span class="tag">Algorithms</span></li>
+        <li data-tags="algorithms"><strong>2026</strong> - <a href="https://doi.org/10.1038/s41467-025-66775-9">Measuring central charge on a universal quantum processor</a>, (N. U. Köylüoğlu <em>et al.</em>) <em>Nature Communications</em> <strong>17</strong>, 305. <span class="tag">Algorithms</span></li>
         <li data-tags="algorithms"><strong>2025</strong> - <a href="https://arxiv.org/abs/2507.22710">Enhanced Prediction of CAR T-Cell Cytotoxicity with Quantum-Kernel Methods</a>, (F. Utro, &hellip;, M. Amico <em>et al.</em>) arXiv:2507.22710. <span class="tag">Algorithms</span></li>
         <li data-tags="mitigation"><strong>2025</strong> - <a href="https://patents.google.com/patent/US20250165836A1">Sparse noise tomography-based qubit mapping</a>, (M. Amico <em>et al.</em>) US Patent 20250165836A1. <span class="tag">Mitigation</span></li>
-        <li data-tags="algorithms"><strong>2024</strong> - <a href="https://arxiv.org/abs/2408.06342">Measuring central charge on a universal quantum processor</a>, (N. U. Köylüoğlu, &hellip;, M. Amico <em>et al.</em>) Nature Communications (Upcoming). <span class="tag">Algorithms</span></li>
-        <li data-tags="algorithms"><strong>2024</strong> - <a href="https://doi.org/10.1038/s41467-025-59716-z">Diagonalization of large many-body Hamiltonians on a quantum processor</a>, (N. Yoshioka, M. Amico <em>et al.</em>) <em>Nature Communications</em> <strong>16</strong>, 5014. <span class="tag">Algorithms</span></li>
-        <li data-tags="algorithms"><strong>2024</strong> - <a href="https://arxiv.org/html/2501.09702v3">Sample-based Krylov Quantum Diagonalization</a>, #(J. Yu,  &hellip;, M. Amico <em>et al.</em>) arXiv:2501.09702. <span class="tag">Algorithms</span></li>
-        <li data-tags="mitigation"><strong>2024</strong> - <a href="https://journals.aps.org/prxquantum/abstract/10.1103/8bzc-dlgt">Tensor-network-enhanced dynamic multiproduct formulas</a>, (N. F. Robertson, &hellip;, M. Amico <em>et al.</em>) <em>PRX Quantum</em> <strong>6</strong>, 020360. <span class="tag">Mitigation</span></li>
-        <li data-tags="mitigation"><strong>2024</strong> - <a href="https://ieeexplore.ieee.org/abstract/document/10609605">Suppressing correlated noise in quantum computers via context-aware compiling</a>, (A. Seif, &hellip;, M. Amico <em>et al.</em>) Proc. ACM/IEEE QCE 2024. <span class="tag">Mitigation</span></li>
+        <li data-tags="algorithms"><strong>2025</strong> - <a href="https://doi.org/10.1038/s41467-025-59716-z">Diagonalization of large many-body Hamiltonians on a quantum processor</a>, (N. Yoshioka, M. Amico <em>et al.</em>) <em>Nature Communications</em> <strong>16</strong>, 5014. <span class="tag">Algorithms</span></li>
+        <li data-tags="algorithms"><strong>2025</strong> - <a href="https://arxiv.org/abs/2501.09702">Quantum-Centric Algorithm for Sample-Based Krylov Diagonalization</a>, (J. Yu, &hellip;, M. Amico <em>et al.</em>) arXiv:2501.09702. <span class="tag">Algorithms</span></li>
+        <li data-tags="mitigation"><strong>2025</strong> - <a href="https://journals.aps.org/prxquantum/abstract/10.1103/8bzc-dlgt">Tensor-network-enhanced dynamic multiproduct formulas</a>, (N. F. Robertson, &hellip;, M. Amico <em>et al.</em>) <em>PRX Quantum</em> <strong>6</strong>, 020360. <span class="tag">Mitigation</span></li>
+        <li data-tags="mitigation"><strong>2024</strong> - <a href="https://ieeexplore.ieee.org/abstract/document/10609605">Suppressing correlated noise in quantum computers via context-aware compiling</a>, (A. Seif, &hellip;, M. Amico <em>et al.</em>) Proc. ACM/IEEE ISCA 2024. <span class="tag">Mitigation</span></li>
         <li data-tags="mitigation"><strong>2023</strong> - <a href="https://ieeexplore.ieee.org/abstract/document/10313904">Defining Best Practices for Quantum Benchmarks</a>, (M. Amico <em>et al.</em>) Proc. IEEE QCE 2023. <span class="tag">Mitigation</span></li>
         <li data-tags="mitigation"><strong>2021</strong> - <a href="https://doi.org/10.1103/PRXQuantum.2.040324">Experimental deep reinforcement learning for error-robust gate-set design on a superconducting quantum computer</a>, (Y. Baum, M. Amico <em>et al.</em>) <em>PRX Quantum</em> <strong>2</strong>, 040324. <span class="tag">Mitigation</span></li>
         <li data-tags="algorithms"><strong>2021</strong> - <a href="https://doi.org/10.1103/PhysRevA.103.L060202">Measurement of work and heat in the classical and quantum regimes</a>, (P. Solinas, M. Amico <em>et al.</em>) <em>Phys. Rev. A</em> <strong>103</strong>, L060202. <span class="tag">Algorithms</span></li>
@@ -175,12 +230,12 @@
         <li data-tags="algorithms"><strong>2019</strong> - <a href="https://doi.org/10.1103/PhysRevA.100.012305">Experimental study of Shor's factoring algorithm using the IBM Q Experience</a>, (M. Amico <em>et al.</em>) <em>Phys. Rev. A</em> <strong>100</strong>, 012305. <span class="tag">Algorithms</span></li>
         <li data-tags="qed"><strong>2019</strong> - <a href="https://doi.org/10.1103/PhysRevA.100.013841">Dynamical Lamb effect in a superconducting circuit</a>, (M. Amico <em>et al.</em>) <em>Phys. Rev. A</em> <strong>100</strong>, 013841. <span class="tag">QED</span></li>
       </ul>
-      <p>For citation metrics and newly added preprints, see my <a href="https://scholar.google.ca/citations?user=Zalars4AAAAJ">Google Scholar profile</a>.</p>
+      <p>For citation metrics and newly added preprints, see my <a href="https://scholar.google.com/citations?user=Zalars4AAAAJ">Google Scholar profile</a>.</p>
     </section>
 
     <a href="#top" class="back-to-top">Back to top</a>
 
-    <footer><hr><small>© 2025 Mirko Amico</small></footer>
+    <footer><hr><small>© 2026 Mirko Amico</small></footer>
   </div>
 
 <script>
@@ -218,6 +273,6 @@ pills.forEach(pill => pill.addEventListener('click', () => {
   filterPubs();
 }));
 </script>
-<script src="/js/theme-toggle.js"></script>
+<script src="../js/theme-toggle.js"></script>
 </body>
 </html>
